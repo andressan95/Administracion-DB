@@ -119,9 +119,7 @@
 			
 			<div><label>Tipo Usuario:</label>
                             <select id="tipo_usuario" name="tipo_usuario">
-					<?php while($row = $result->fetch_assoc()){ ?>
-                                <option value="Usuario" selected="selected"></option>
-					<?php }?>
+                                <option value="Usuario" selected="selected"> Usuario</option>
 				</select>
 			</div>
 			<br />
