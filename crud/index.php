@@ -1,10 +1,10 @@
 <?php
-include_once 'dbconfig.php';
+include_once 'conexion.php';
 
 // delete condition
 if(isset($_GET['delete_id']))
 {
-	$sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+	$sql_query="DELETE FROM usuarios WHERE user_id=".$_GET['delete_id'];
 	mysql_query($sql_query);
 	header("Location: $_SERVER[PHP_SELF]");
 }
@@ -15,7 +15,7 @@ if(isset($_GET['delete_id']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Simple CRUD Operations With PHP and MySql - By Coding Cage</title>
+<title>CRUD</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
 function edt_id(id)
@@ -39,7 +39,7 @@ function delete_id(id)
 
 <div id="header">
 	<div id="content">
-    <label>CRUD Operations With PHP and MySql - <a href="http://www.codingcage.com" target="_blank">By Coding Cage</a></label>
+    <label>CRUD</label>
     </div>
 </div>
 
@@ -47,12 +47,13 @@ function delete_id(id)
 	<div id="content">
     <table align="center">
     <tr>
-    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    <th colspan="5"><a href="add_data.php">Registrar.</a></th>
     </tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>City Name</th>
-    <th colspan="2">Operations</th>
+    <th>Nombre</th>
+    <th>Usuario</th>
+    <th>Password</th>
+    <th>Tipo de Usuario</th>
+    <th colspan="2">Operaciones</th>
     </tr>
     <?php
 	$sql_query="SELECT * FROM users";
@@ -66,6 +67,7 @@ function delete_id(id)
             <td><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
+            <td><?php echo $row[4]; ?></td>
             <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
             <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
             </tr>
@@ -76,7 +78,7 @@ function delete_id(id)
 	{
 		?>
         <tr>
-        <td colspan="5">No Data Found !</td>
+        <td colspan="5">No hay Usuarios Registrados</td>
         </tr>
         <?php
 	}
