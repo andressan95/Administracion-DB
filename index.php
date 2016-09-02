@@ -16,7 +16,7 @@
 		
 		$sha1_pass = sha1($password);
 		
-		$sql = "SELECT id, id_tipo FROM usuarios WHERE usuario = '$usuario' AND password = '$password'";
+		$sql = "SELECT id, id_tipo FROM usuarios WHERE usuario = '$usuario' AND password = '$sha1_pass'";
 		$result=$mysqli->query($sql);
 		$rows = $result->num_rows;
 		
