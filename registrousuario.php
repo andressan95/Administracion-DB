@@ -120,7 +120,7 @@
 			<div><label>Tipo Usuario:</label>
                             <select id="tipo_usuario" name="tipo_usuario">
 					<?php while($row = $result->fetch_assoc()){ ?>
-                                <option value="Usuario" selected="selected" disabled="" >Usuario</option>
+                                <option value="0" selected="selected"  >Usuario</option>
 					<?php }?>
 				</select>
 			</div>
