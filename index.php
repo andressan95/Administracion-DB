@@ -50,6 +50,10 @@ body
 {
 background-image: url(<?php echo $imageURL;?>);
 }
+
+
+.form{opacity: 1;}
+    
   
 </style>
 <html>
@@ -64,7 +68,7 @@ background-image: url(<?php echo $imageURL;?>);
             <br>
             <section>
                 
-		<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
+                <form class="form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
                     <div><label>Usuario:</label><input id="usuario" name="usuario" type="text" required ></div>
 			<br />
                         <div><label>Password:</label><input id="password" name="password" type="password" required></div>
