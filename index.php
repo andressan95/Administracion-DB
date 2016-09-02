@@ -61,8 +61,8 @@ background-image: url(<?php echo $imageURL;?>);
             <br>
             <br>
             <section>
-                <div class="classname" opacity="0.36" >
-                <form  opacity="1" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
+                <div class="classname" >
+                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
                     <div><label>Usuario:</label><input id="usuario" name="usuario" type="text" required ></div>
 			<br />
                         <div><label>Password:</label><input id="password" name="password" type="password" required></div>

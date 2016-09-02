@@ -1,5 +1,6 @@
 <?php
-	
+	$imageURL = 'imagenes/background.jpg';
+
 	session_start();
 	require 'conexion.php';
 	
@@ -49,6 +50,22 @@
 ?>
 
 <html>
+    <style type="text/css">
+body{ font-size:18px; color:#FFF; }
+a { color:#FFF}
+.classname { border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
+
+/* =Your Generated css 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+.classname{  -moz-box-shadow: 8px  10px  27px  #000000;-webkit-box-shadow: 8px  10px  27px  #000000;box-shadow: 8px  10px  27px  #000000;}
+/* End of Your Generated css 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+body
+{
+background-image: url(<?php echo $imageURL;?>);
+}
+  
+</style>
 	<head>
 		<title>Registro</title>
 		
@@ -107,7 +124,7 @@
 	</head>
 	
 	<body>
-		
+            <div class="classname">
 		<form id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
 			<div><label>Nombre:</label><input id="nombre"name="nombre" type="text" ></div>
 			<br />
@@ -133,7 +150,7 @@
 			
 			<div><input name="registar" type="button" value="Registrar" onClick="validar();"></div> 
 		</form>
-		
+		</div>
 		<?php if($bandera) { ?>
 			<h1>Registro exitoso</h1>
 			<a href="welcome.php">Regresar</a>
