@@ -1,10 +1,11 @@
 <?php
 	
 	
-	session_start();
 	require('conexion.php');
 	
-        
+        if(!isset($_SESSION["id_usuario"])){
+		header("Location: registrousuario.php");
+	}
 	
 	$sql = "SELECT id, tipo FROM tipo_usuario";
 	$result=$mysqli->query($sql);
@@ -120,9 +121,9 @@
 			<br />
 			
 			<div><label>Tipo Usuario:</label>
-                            <select id="tipo_usuario" name="tipo_usuario" disabled="true" >
+                            <select id="tipo_usuario" name="tipo_usuario"  >
 					<?php while($row = $result->fetch_assoc()){ ?>
-                                <option value="<?php echo $row['2']; ?>" selected="selected" ><?php echo $row['tipo']; ?></option>
+                                <option value="<?php echo $row['id']; ?>" selected="selected" ><?php echo $row['tipo']; ?></option>
 					<?php }?>
 				</select>
 			</div>
