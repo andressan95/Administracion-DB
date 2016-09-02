@@ -64,7 +64,7 @@ background-image: url(<?php echo $imageURL;?>);
 	</head>
 	
 	<body>
-            <div class="classname">
+            
             <label>Registro De Escrituras </label>
             <br>
             <br>
@@ -83,7 +83,7 @@ background-image: url(<?php echo $imageURL;?>);
 		<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
             </section>
             
-            </div>
+       
             <section>
                 <a href="registroUsuario.php">Registrarse</a>
             </section>
