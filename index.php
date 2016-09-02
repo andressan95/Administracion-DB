@@ -37,30 +37,11 @@ $imageURL = 'imagenes/background.jpg';
 <style type="text/css">
 body{ font-size:18px; color:#FFF; }
 a { color:#FFF}
-.classname {
-/*    opacity: 0.33; border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;
-*/
-background-color: #ffffff;
-border: 2px solid #999999;
--moz-border-radius: 38px;
--webkit-border-radius: 38px;
-border-radius: 38px;
-/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
--moz-box-shadow: 0px 0px 20px #000000;
--webkit-box-shadow: 0px 0px 20px #000000;
-box-shadow: 0px 0px 20px #000000;
-/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
-opacity: 0.41;
--ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 41);
-/*-ms-filter must come before filter*/
-filter: alpha(opacity = 41);
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*All filters must be placed together*/
-}
+.classname { opacity: 0.33; border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
 
 /* =Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/*.classname{-moz-box-shadow: 7px  8px  18px  #000000;-webkit-box-shadow: 7px  8px  18px  #000000;box-shadow: 7px  8px  18px  #000000;}
+.classname{-moz-box-shadow: 7px  8px  18px  #000000;-webkit-box-shadow: 7px  8px  18px  #000000;box-shadow: 7px  8px  18px  #000000;}
 /* End of Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 body{width:90%;margin:auto;min-width:600px;max-width:2000px}
@@ -70,10 +51,6 @@ body
 background-image: url(<?php echo $imageURL;?>);
 }
 
-
-
-.form{opacity: 1;}
-    
   
 </style>
 <html>
@@ -87,7 +64,7 @@ background-image: url(<?php echo $imageURL;?>);
             <br>
             <br>
             <section>
-                
+                <div>
                 <form class="form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
                     <div><label>Usuario:</label><input id="usuario" name="usuario" type="text" required ></div>
 			<br />
@@ -95,7 +72,7 @@ background-image: url(<?php echo $imageURL;?>);
 			<br />
 			<div><input name="login" type="submit" value="login"></div> 
 		</form> 
-		
+		</div>
 		<br />
 		
 		<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
