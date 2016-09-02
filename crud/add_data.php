@@ -1,4 +1,69 @@
+<?php
+		
+	
+	require('dbconfig.php');
+	
+	
+	$sql = "SELECT id, tipo FROM tipo_usuario where id=2";
+	$result=$mysqli->query($sql);
+	
+	$bandera = false;
+	
+	if(!empty($_POST))
+	{
+		$nombre = mysqli_real_escape_string($mysqli,$_POST['nombre']);
+		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
+		$password = mysqli_real_escape_string($mysqli,$_POST['password']);
+		$tipo_usuario = $_POST['tipo_usuario'];
+		$sha1_pass = sha1($password);
+		
+		$error = '';
+		
+		$sqlUser = "SELECT id FROM usuarios WHERE usuario = '$usuario'";
+		$resultUser=$mysqli->query($sqlUser);
+		$rows = $resultUser->num_rows;
+		
+		if($rows > 0) {
+			$error = "El usuario ya existe";
+			} else {
+			
+			$sqlPerson = "INSERT INTO personal (nombre) VALUES('$nombre')";
+			$resultPerson=$mysqli->query($sqlPerson);
+			$idPersona = $mysqli->insert_id;
+			
+			$sqlUsuario = "INSERT INTO usuarios (usuario, password, id_personal, id_tipo) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario')";
+			$resultUsuario = $mysqli->query($sqlUsuario);
+			
+			if($resultUsuario>0)
+			$bandera = true;
+			else
+			$error = "Error al Registrar";
+			
+		}
+                
+	}	
+        
+        // sql query execution function
+	if(mysql_query($sql_query))
+	{
+		?>
+		<script type="text/javascript">
+		alert('Usuario Registrado ');
+		window.location.href='index.php';
+		</script>
+		<?php
+	}
+	else
+	{
+		?>
+		<script type="text/javascript">
+		alert('Error al registrar');
+		</script>
+		<?php
+	}
+	// sql query execution function
 
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
