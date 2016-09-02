@@ -56,7 +56,7 @@ function delete_id(id)
     <th colspan="2">Operaciones</th>
     </tr>
     <?php
-	$sql_query="SELECT * FROM users";
+	$sql_query="SELECT * FROM usuarios";
 	$result_set=mysql_query($sql_query);
 	if(mysql_num_rows($result_set)>0)
 	{
