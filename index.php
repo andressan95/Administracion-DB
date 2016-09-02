@@ -37,25 +37,17 @@ $imageURL = 'imagenes/background.jpg';
 <style type="text/css">
 body{ font-size:18px; color:#FFF; }
 a { color:#FFF}
-.classname { opacity: 0.33; border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
+.classname { border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
 
 /* =Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-.classname{-moz-box-shadow: 7px  8px  18px  #000000;-webkit-box-shadow: 7px  8px  18px  #000000;box-shadow: 7px  8px  18px  #000000;}
+.classname{-moz-box-shadow: 8px  10px  27px  #000000;-webkit-box-shadow: 8px  10px  27px  #000000;box-shadow: 8px  10px  27px  #000000;}
 /* End of Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-body{width:90%;margin:auto;min-width:600px;max-width:2000px}
-/* background */
 body
 {
 background-image: url(<?php echo $imageURL;?>);
 }
-.previewArea {  z-index:9999999 }
-.previewAreaBox { border:solid 1px #2d2d2d; font-size:18px; text-align:center; padding:50px 50px 0 50px; height:80px; z-index:9999999; -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
-.previewAreapadding { padding:15px;}
-.previewAreaBox .end, .previewAreaBox .start { font-size:0px; display:none;}
-.previewAreaBoxRotet { position:absolute;}
-
   
 </style>
 <html>
@@ -69,7 +61,7 @@ background-image: url(<?php echo $imageURL;?>);
             <br>
             <br>
             <section>
-                <div class="previewAreaBox">
+                <div class="classname">
                 <form  action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
                     <div><label>Usuario:</label><input id="usuario" name="usuario" type="text" required ></div>
 			<br />
