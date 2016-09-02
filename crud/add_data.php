@@ -1,7 +1,7 @@
 <?php
 		
 	
-	require('conexion.php');
+	require('../conexion.php');
 	
 	
 	$sql = "SELECT id, tipo FROM tipo_usuario where id=2";
