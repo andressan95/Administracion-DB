@@ -31,6 +31,12 @@
 		}
 	}
 ?>
+<?php
+
+$imageURL = 'imagenes\background.jpg';
+
+?>
+
 <style type="text/css">
 body{ font-size:18px; color:#FFF; }
 a { color:#FFF}
@@ -41,6 +47,10 @@ a { color:#FFF}
 .classname{-moz-box-shadow: 7px  8px  18px  #000000;-webkit-box-shadow: 7px  8px  18px  #000000;box-shadow: 7px  8px  18px  #000000;}
 /* End of Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+body{width:90%;margin:auto;min-width:600px;max-width:2000px}
+/* background */
+
+ div { background-image: url(<?php echo $imageURL;?>); }
 </style>
 <html>
 	<head>
