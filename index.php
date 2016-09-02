@@ -33,7 +33,7 @@
 ?>
 <?php
 
-$imageURL = 'imagenes\background.jpg';
+$imageURL = 'imagenes/background.jpg';
 
 ?>
 
@@ -50,7 +50,7 @@ a { color:#FFF}
 body{width:90%;margin:auto;min-width:600px;max-width:2000px}
 /* background */
 
- div { background-image: url(<?php echo $imageURL;?>); }
+  background-image: url(<?php echo $imageURL;?>);
 </style>
 <html>
 	<head>
