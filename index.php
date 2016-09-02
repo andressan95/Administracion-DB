@@ -31,12 +31,24 @@
 		}
 	}
 ?>
+<style type="text/css">
+body{ font-size:18px; color:#FFF; }
+a { color:#FFF}
+.classname { border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
+
+/* =Your Generated css 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+.classname{-moz-box-shadow: 7px  8px  18px  #000000;-webkit-box-shadow: 7px  8px  18px  #000000;box-shadow: 7px  8px  18px  #000000;}
+/* End of Your Generated css 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+</style>
 <html>
 	<head>
 		<title>Login</title>
 	</head>
 	
 	<body>
+            <div class="classname">
             <label>Registro De Escrituras </label>
             <br>
             <br>
@@ -54,8 +66,11 @@
 		
 		<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
             </section>
+            
+            </div>
             <section>
                 <a href="registroUsuario.php">Registrarse</a>
             </section>
+            
             </body>
 </html>		
