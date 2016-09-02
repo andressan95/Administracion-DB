@@ -2,6 +2,7 @@
 
 	require('conexion.php');
 	
+	session_start();
 	
 	if(isset($_SESSION["id_usuario"])){
 		header("Location: welcome.php");
@@ -15,7 +16,7 @@
 		
 		$sha1_pass = sha1($password);
 		
-		$sql = "SELECT id, id_tipo FROM usuarios WHERE usuario = '$usuario' AND password = '$sha1_pass'";
+		$sql = "SELECT id, id_tipo FROM usuarios WHERE usuario = '$usuario' AND password = '$password'";
 		$result=$mysqli->query($sql);
 		$rows = $result->num_rows;
 		
@@ -54,7 +55,7 @@
 		<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
             </section>
             <section>
-                <a href="http://proyectoadministraciondb.azurewebsites.net/registroUsuario.php">Registrarse</a>
+                <a href="registroUsuario.php">Registrarse</a>
             </section>
             </body>
 </html>		
