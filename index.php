@@ -55,7 +55,7 @@
 		<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
             </section>
             <section>
-                <a href="registroUsuario.php">Registrarse</a>
+                <a href="location: registroUsuario.php">Registrarse</a>
             </section>
             </body>
 </html>		
