@@ -41,7 +41,7 @@ a { color:#FFF}
 
 /* =Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-.classname{-moz-box-shadow: 8px  10px  27px  #000000;-webkit-box-shadow: 8px  10px  27px  #000000;box-shadow: 8px  10px  27px  #000000;}
+.classname{ opacity: 36; -moz-box-shadow: 8px  10px  27px  #000000;-webkit-box-shadow: 8px  10px  27px  #000000;box-shadow: 8px  10px  27px  #000000;}
 /* End of Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 body
