@@ -49,14 +49,14 @@ function delete_id(id)
     <tr>
     <th colspan="5"><a href="add_data.php">Registrar.</a></th>
     </tr>
-    <th>Nombre</th>
     <th>Usuario</th>
     <th>Password</th>
+    <th>Nombre</th>
     <th>Tipo de Usuario</th>
     <th colspan="2">Operaciones</th>
     </tr>
     <?php
-	$sql_query="SELECT * FROM usuarios";
+	$sql_query="select * from usuarios , personal , tipo_usuario;";
 	$result_set=mysql_query($sql_query);
 	if(mysql_num_rows($result_set)>0)
 	{
@@ -66,8 +66,9 @@ function delete_id(id)
             <tr>
             <td><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
-            <td><?php echo $row[3]; ?></td>
-            <td><?php echo $row[4]; ?></td>
+            <td><?php echo $row[6]; ?></td>
+            <td><?php echo $row[8]; ?></td>
+
             <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
             <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
             </tr>
