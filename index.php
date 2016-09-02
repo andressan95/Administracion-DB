@@ -38,7 +38,10 @@
 	
 	<body>
             <label>Registro De Escrituras </label>
-            <section value="Iniciar Sesion">
+            <br>
+            <br>
+            <section>
+                
 		<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
                     <div><label>Usuario:</label><input id="usuario" name="usuario" type="text" required ></div>
 			<br />
@@ -50,6 +53,9 @@
 		<br />
 		
 		<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
-	</section>
+            </section>
+            <section>
+                <a href="registroUsuario.php">Registrarse</a>
+            </section>
             </body>
 </html>		
