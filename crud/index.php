@@ -1,5 +1,5 @@
 <?php
-include_once '../conexion.php';
+include_once 'http://proyectoadministraciondb.azurewebsites.net/conexion.php';
 
 // delete condition
 if(isset($_GET['delete_id']))
