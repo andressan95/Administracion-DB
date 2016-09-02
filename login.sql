@@ -2,6 +2,7 @@
 -- version 4.4.15.5
 -- http://www.phpmyadmin.net
 --
+
 -- Servidor: localhost
 -- Tiempo de generación: 25-05-2016 a las 08:05:05
 -- Versión del servidor: 5.6.28-log

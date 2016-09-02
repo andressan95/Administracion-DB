@@ -6,6 +6,7 @@
 	if(!isset($_SESSION["id_usuario"])){
 		header("Location: index.php");
 	}
+        
 	
 	$sql = "SELECT id, tipo FROM tipo_usuario";
 	$result=$mysqli->query($sql);
