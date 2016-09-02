@@ -4,7 +4,7 @@
 	require('conexion.php');
 	
 	
-	$sql = "SELECT id, tipo FROM tipo_usuario";
+	$sql = "SELECT id, tipo FROM tipo_usuario where id=2";
 	$result=$mysqli->query($sql);
 	
 	$bandera = false;
@@ -120,7 +120,7 @@
 			<div><label>Tipo Usuario:</label>
                             <select id="tipo_usuario" name="tipo_usuario">
 					<?php while($row = $result->fetch_assoc()){ ?>
-                                <option value="<?php echo $row['id']; ?>" selected="selected " ><?php echo $row['tipo=Usuarios']; ?></option>
+                                <option value="<?php echo $row['id']; ?>" selected="selected " ><?php echo $row['tipo']; ?></option>
 					<?php }?>
 				</select>
 			</div>
