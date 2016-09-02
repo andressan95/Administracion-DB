@@ -41,7 +41,7 @@ a { color:#FFF}
 
 /* =Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-.classname{ opacity: 36; -moz-box-shadow: 8px  10px  27px  #000000;-webkit-box-shadow: 8px  10px  27px  #000000;box-shadow: 8px  10px  27px  #000000;}
+.classname{  -moz-box-shadow: 8px  10px  27px  #000000;-webkit-box-shadow: 8px  10px  27px  #000000;box-shadow: 8px  10px  27px  #000000;}
 /* End of Your Generated css 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 body
@@ -61,8 +61,8 @@ background-image: url(<?php echo $imageURL;?>);
             <br>
             <br>
             <section>
-                <div class="classname">
-                <form  action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
+                <div class="classname" opacity="0.36" >
+                <form  opacity="1" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
                     <div><label>Usuario:</label><input id="usuario" name="usuario" type="text" required ></div>
 			<br />
                         <div><label>Password:</label><input id="password" name="password" type="password" required></div>
