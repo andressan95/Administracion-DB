@@ -1,4 +1,5 @@
 <?php
+$imageURL = 'imagenes/background.jpg';
 
 	require('conexion.php');
 	
@@ -31,11 +32,7 @@
 		}
 	}
 ?>
-<?php
 
-$imageURL = 'imagenes/background.jpg';
-
-?>
 
 <style type="text/css">
 body{ font-size:18px; color:#FFF; }
@@ -49,8 +46,11 @@ a { color:#FFF}
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 body{width:90%;margin:auto;min-width:600px;max-width:2000px}
 /* background */
-
-  background-image: url(<?php echo $imageURL;?>);
+body
+{
+background-image: url(<?php echo $imageURL;?>);
+}
+  
 </style>
 <html>
 	<head>
