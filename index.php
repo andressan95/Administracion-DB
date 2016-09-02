@@ -50,6 +50,11 @@ body
 {
 background-image: url(<?php echo $imageURL;?>);
 }
+.previewArea {  z-index:9999999 }
+.previewAreaBox { border:solid 1px #2d2d2d; font-size:18px; text-align:center; padding:50px 50px 0 50px; height:80px; z-index:9999999; -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
+.previewAreapadding { padding:15px;}
+.previewAreaBox .end, .previewAreaBox .start { font-size:0px; display:none;}
+.previewAreaBoxRotet { position:absolute;}
 
   
 </style>
@@ -64,8 +69,8 @@ background-image: url(<?php echo $imageURL;?>);
             <br>
             <br>
             <section>
-                <div>
-                <form class="form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
+                <div class="previewAreaBox">
+                <form  action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
                     <div><label>Usuario:</label><input id="usuario" name="usuario" type="text" required ></div>
 			<br />
                         <div><label>Password:</label><input id="password" name="password" type="password" required></div>
