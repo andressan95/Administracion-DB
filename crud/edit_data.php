@@ -9,13 +9,13 @@ if(isset($_GET['edit_id']))
 if(isset($_POST['btn-update']))
 {
 	// variables for input data
-	$first_name = $_POST['usuario'];
-	$last_name = $_POST['password'];
+	$usuario = $_POST['usuario'];
+	$password = $_POST['password'];
 	$city_name = $_POST['id_personal'];
 	// variables for input data
 	
 	// sql query for update data into database
-	$sql_query = "UPDATE usuarios SET usuario='$first_name',password='$last_name',id_personal='$city_name' WHERE id=".$_GET['edit_id'];
+	$sql_query = "UPDATE usuarios SET usuario='$first_name',password='$last_name' WHERE id=".$_GET['edit_id'];
 	// sql query for update data into database
 	
 	// sql query execution function
