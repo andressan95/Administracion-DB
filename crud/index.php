@@ -56,7 +56,12 @@ function delete_id(id)
     <th colspan="2">Operaciones</th>
     </tr>
     <?php
-	$sql_query="select * from usuarios , personal , tipo_usuario;";
+	$sql_query="SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
+                    FROM usuarios
+                    inner JOIN personal
+                    ON usuarios.id_personal=personal.id
+                    inner join tipo_usuario
+                    on usuarios.id_tipo = tipo_usuario.id;";
 	$result_set=mysql_query($sql_query);
 	if(mysql_num_rows($result_set)>0)
 	{
@@ -66,8 +71,8 @@ function delete_id(id)
             <tr>
             <td><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
-            <td><?php echo $row[6]; ?></td>
-            <td><?php echo $row[8]; ?></td>
+            <td><?php echo $row[3]; ?></td>
+            <td><?php echo $row[4]; ?></td>
 
             <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
             <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
