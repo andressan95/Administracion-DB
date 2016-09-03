@@ -55,7 +55,7 @@ if(isset($_POST['btn-cancel']))
 
 <div id="header">
 	<div id="content">
-    <label>CRUD Operations With PHP and MySql - <a href="http://www.codingcage.com" target="_blank">By Coding Cage</a></label>
+    <label>CRUD</label>
     </div>
 </div>
 
