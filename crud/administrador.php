@@ -32,7 +32,8 @@
 
 <div id="header">
 	<div id="content">
-    <label>Bienvenido <h1><?php echo 'Bienvenid@ '.utf8_decode($row['nombre']); ?></h1>  <a href="logout.php">Cerrar Sesi&oacute;n</a> </label>
+    <label>Bienvenido <?php echo 'Bienvenid@ '.utf8_decode($row['nombre']); ?></label>
+    <label><a href="logout.php">Cerrar Sesi&oacute;n</a> </label>
     </div>
 </div>
 <div id="body">
