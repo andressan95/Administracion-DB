@@ -4,7 +4,7 @@
 	session_start();
 	
 	if(isset($_SESSION["id_usuario"])){
-		header("Location: ../welcome.php");
+		header("Location: administrador.php");
 	}
 	
 	if(!empty($_POST))
@@ -24,7 +24,7 @@
 			$_SESSION['id_usuario'] = $row['id'];
 			$_SESSION['tipo_usuario'] = $row['id_tipo'];
 			
-			header("location: ../welcome.php");
+			header("location: administrador.php");
 			} else {
 			$error = "El nombre o contraseña son incorrectos";
 		}
