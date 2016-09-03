@@ -24,7 +24,11 @@
 	</head>
 	
 	<body>
-		
+		<?php 
+                if($_SESSION['tipo_usuario']==2){
+                      header("Location: usuario.php");
+                  } ?>
+            
 	<?php if($_SESSION['tipo_usuario']==1){?>
             
             <center>
