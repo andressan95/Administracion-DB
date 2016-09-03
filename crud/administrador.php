@@ -24,27 +24,27 @@
 	</head>
 	
 	<body>
-	
-	<h1><?php echo 'Bienvenid@ '.utf8_decode($row['nombre']); ?></h1>
-	
-	<?php if($_SESSION['tipo_usuario']==1) { ?>
-	<center>
+		
+	<?php if($_SESSION['tipo_usuario']==1){?>
+            
+            <center>
+                <div id="header">
+                    <div id="content">
+                        <label><?php echo 'Bienvenid@ ' . utf8_decode($row['nombre']); ?></label>
+                        <label><a href="logout.php">Cerrar Sesi&oacute;n</a> </label>
+                    </div>
+                </div>
+                
+                <div id="body">
+                    <div id="content">
 
-<div id="header">
-	<div id="content">
-    <label>Bienvenido <?php echo 'Bienvenid@ '.utf8_decode($row['nombre']); ?></label>
-    <label><a href="logout.php">Cerrar Sesi&oacute;n</a> </label>
-    </div>
-</div>
-<div id="body">
-	<div id="content">
-    
-    <td><button><a href="registro.php"><strong>Registro Usuarios</strong></a></button></td>
-   
-    </div>
-</div>
-	
-	<?php } ?>
+                        <td><button><a href="registro.php"><strong>Registro Usuarios</strong></a></button></td>
+
+                    </div>
+                </div>
+            </center>
+
+            <?php } ?>
 	
 	</body>
 </html>
