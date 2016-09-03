@@ -61,7 +61,7 @@
     <tr>
     <td><button type="submit" name="login"><strong>Iniciar</strong></button></td>
     </tr>
-    <tr> <a href="registroUsuario.php">Registrarse</a></tr>
+    <tr> <a href="registro.php">Registrarse</a></tr>
     <tr>
     <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
     </tr>
