@@ -135,7 +135,6 @@ if (!empty($_POST)) {
                             </tr>
                             <tr> <td> <label>Tipo Usuario:</label>
                                     <select id="tipo_usuario" name="tipo_usuario">
-                                        <option value="0">Seleccione tipo de usuario...</option>
                                                            <?php while ($row = $result->fetch_assoc()) { ?>
                                             <option value="<?php echo $row['id']; ?>" selected><?php echo $row['tipo']; ?></option>
                                                            <?php } ?>
