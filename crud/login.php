@@ -4,7 +4,7 @@
 	session_start();
 	
 	if(isset($_SESSION["id_usuario"])){
-		header("Location: welcome.php");
+		header("Location: ../welcome.php");
 	}
 	
 	if(!empty($_POST))
@@ -24,7 +24,7 @@
 			$_SESSION['id_usuario'] = $row['id'];
 			$_SESSION['tipo_usuario'] = $row['id_tipo'];
 			
-			header("location: welcome.php");
+			header("location: ../welcome.php");
 			} else {
 			$error = "El nombre o contraseña son incorrectos";
 		}
@@ -60,7 +60,7 @@
    
     <tr>
     <td><button type="submit" name="login"><strong>Iniciar</strong></button></td>
-    <td><button href="add_data.php" name="login"><strong>Registrar</strong></button></td>
+    <td><button href="add_data.php"><strong>Registrar</strong></button></td>
     </tr>
     <tr>
     <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
