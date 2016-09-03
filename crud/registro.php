@@ -116,7 +116,7 @@ if (!empty($_POST)) {
             </div>
             <div id="body">
                 <div id="content">
-                    <form method="post">
+                    <form method="post" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" >
                         <table align="center">
                             <tr>
                                 <td align="center"><a href="index.php">Inicio</a></td>
