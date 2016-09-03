@@ -38,15 +38,12 @@
 <div id="body">
 	<div id="content">
     
-    <td><button value="Registros"><a href="registro.php">Registarse<strong>Registro Usuarios</strong></a></button></td>
+    <td><button><a href="registro.php"><strong>Registro Usuarios</strong></a></button></td>
    
     </div>
 </div>
-	<a href="registro.php">Registarse</a>
-	<br />
-	<?php } ?>
 	
-	<a href="logout.php">Cerrar Sesi&oacute;n</a>
+	<?php } ?>
 	
 	</body>
 </html>
