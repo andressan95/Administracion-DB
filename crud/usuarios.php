@@ -29,7 +29,7 @@ function delete_id(id)
 {
 	if(confirm('Sure to Delete ?'))
 	{
-		window.location.href='index.php?delete_id='+id;
+		window.location.href='usuarios.php?delete_id='+id;
 	}
 }
 </script>
