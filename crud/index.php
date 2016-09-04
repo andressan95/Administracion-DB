@@ -60,7 +60,7 @@
                     </div>
                 
                     <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s45">
             <input id="password" type="password" name="password" class="validate">
           <label for="password">Password</label>
         </div>
