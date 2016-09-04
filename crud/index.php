@@ -66,16 +66,14 @@
                 
 
                 </div>
-  <button class="btn waves-effect waves-light" type="submit" id="submit" name="login" >Submit
-    <i class="material-icons right">send</i>
+  <button class="btn waves-effect waves-light" type="submit" id="submit" name="login" >Iniciar Sesion
+    <i class="material-icons right"></i>
   </button>
-                        <button class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3"
-                        type="submit" id="submit" name="login"> Iniciar Sesion<i class="mdi-content-send right"></i></button>
-                
+                       
                 <label> O </label>
 
 
-                <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
+                <a href="registro_usuario.php" class="btn waves-effect waves-light">Registrarse <i class="mdi-content-send right"></i></a>
             </form>
             <div class="progress">
                 <div class="indeterminate"></div>
