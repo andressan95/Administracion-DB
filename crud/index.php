@@ -59,6 +59,12 @@
                         <input type="text" name="usuario" id="username" required /></br>
                     </div>
                 
+                    <div class="row">
+        <div class="input-field col s12">
+            <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
                     <div class="input-field col s45 ">
                         <label>Contraseña :</label></br>
                         <input type="password" name="password" id="password" required /></br>
