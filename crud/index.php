@@ -77,7 +77,7 @@
                 <div class="indeterminate"></div>
             </div>
             
-              <div class="preloader-wrapper big active">
+              <div class="preloader-wrapper small active">
       <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
           <div class="circle"></div>
@@ -119,7 +119,12 @@
       </div>
     </div>
         
-             <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
+             <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?>  
+             
+             <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+             </div>
         </div>
     </div>
          
