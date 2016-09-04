@@ -61,14 +61,11 @@
                 
                     <div class="row">
         <div class="input-field col s45">
-            <input id="password" type="password" name="password" class="validate">
+            <input id="password" type="password" name="password" class="validate" required="">
           <label for="password">Password</label>
         </div>
       </div>
-                    <div class="input-field col s45 ">
-                        <label>Contraseña :</label></br>
-                        <input type="password" name="password" id="password" required /></br>
-                    </div>  
+                   
                 </div>
                 <button class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3"
                         type="submit" id="submit" name="login"> Iniciar Sesion<i class="mdi-content-send right"></i></button>
