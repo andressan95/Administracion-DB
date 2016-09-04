@@ -3,7 +3,7 @@ require('../conexion.php');
 
         session_start();
         if ($_SESSION['tipo_usuario'] == 2) {
-            alert('Acceso Prohibido se redireccionando');
+            echo 'alert("Acceso Prohibido se redireccionando");'; 
             header("Location: usuario.php");
         }
 
