@@ -3,10 +3,15 @@ include_once 'dbconfig.php';
 session_start();
 	require '../conexion.php';
 	
-	if(!isset($_SESSION["id_usuario"])){
+         session_start();
+        if(!isset($_SESSION["id_usuario"])){
 		header("Location: index.php");
 	}
-        
+        if ($_SESSION['tipo_usuario'] == 2) {
+            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
+            header("Location: usuario.php");
+        }
+
 if(isset($_GET['edit_id']))
 {
 	$sql_query="SELECT * FROM usuarios WHERE id=".$_GET['edit_id'];
