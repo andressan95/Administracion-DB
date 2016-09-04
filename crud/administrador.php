@@ -43,10 +43,10 @@
                     <div id="content">
                         <table>
                             <tr>
-                                <td><button value="Registro Usuarios"><a href="registro.php"></a></button></td>                  
+                                <td><button value="Registro Usuarios" href="registro.php"><a href="registro.php"><strong>Registro Usuario</strong></a></button></td>                  
                         </tr>
                         <tr>
-                            <td><button value="Usuarios Registrados"><a href="usuarios.php"></a></button></td>                  
+                            <td><button value="Usuarios Registrados"><strong>Usuarios Registrados</strong><a href="usuarios.php"></a></button></td>                  
                         </tr>
                         </table>
                     </div>
