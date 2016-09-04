@@ -18,20 +18,39 @@
 
 <html>
 	<head>
-		<title>Welcome</title>
+		<title>Administrador</title>
+                <link rel="stylesheet" href="style.css" type="text/css" />
+
 	</head>
 	
 	<body>
-	
-	<h1><?php echo 'Bienvenid@ '.utf8_decode($row['nombre']); ?></h1>
-	
-	<?php if($_SESSION['tipo_usuario']==1) { ?>
-	
-	<a href="registro.php">Registarse</a>
-	<br />
-	<?php } ?>
-	
-	<a href="logout.php">Cerrar Sesi&oacute;n</a>
+		
+            
+	<?php if($_SESSION['tipo_usuario']==2){?>
+            
+            <center>
+                <div id="header">
+                    <div id="content">
+                        <label><?php echo 'Bienvenid@ ' . utf8_decode($row['nombre']); ?></label>
+                        <label><a href="logout.php">Cerrar Sesi&oacute;n</a> </label>
+                    </div>
+                </div>
+                
+                <div id="body">
+                    <div id="content">
+                        <table>
+                            <tr>
+                                <td><button value="Registro_Escritura"><strong>Registro de Escritura</strong><a href="registro_escritura.php"></a></button></td>                  
+                        </tr>
+                        <tr>
+                            <td><button value="Perfil"><strong>Perfil</strong><a href="perfil.php"></a></button></td>                  
+                        </tr>
+                        </table>
+                    </div>
+                </div>
+            </center>
+
+            <?php } ?>
 	
 	</body>
 </html>

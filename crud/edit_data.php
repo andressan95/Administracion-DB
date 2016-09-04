@@ -1,5 +1,12 @@
 <?php
 include_once 'dbconfig.php';
+session_start();
+	require '../conexion.php';
+	
+	if(!isset($_SESSION["id_usuario"])){
+		header("Location: index.php");
+	}
+        
 if(isset($_GET['edit_id']))
 {
 	$sql_query="SELECT * FROM usuarios WHERE id=".$_GET['edit_id'];

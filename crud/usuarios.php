@@ -1,6 +1,11 @@
 <?php
 include_once 'dbconfig.php';
-
+session_start();
+	require '../conexion.php';
+	
+	if(!isset($_SESSION["id_usuario"])){
+		header("Location: index.php");
+	}
 // delete condition
 if(isset($_GET['delete_id']))
 {
