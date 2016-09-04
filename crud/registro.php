@@ -2,8 +2,11 @@
 require('../conexion.php');
 
         session_start();
+        if(!isset($_SESSION["id_usuario"])){
+		header("Location: index.php");
+	}
         if ($_SESSION['tipo_usuario'] == 2) {
-            echo 'alert("Acceso Prohibido se redireccionando");'; 
+            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
             header("Location: usuario.php");
         }
 
