@@ -73,6 +73,9 @@
 
                 <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
             </form>
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
              <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
         </div>
     </div>
