@@ -41,9 +41,14 @@
                 
                 <div id="body">
                     <div id="content">
-
-                        <td><button><a href="registro.php"><strong>Registro Usuarios</strong></a></button></td>
-
+                        <table>
+                            <tr>
+                                <td><button><a href="registro.php"><strong>Registro Usuarios</strong></a></button></td>                  
+                        </tr>
+                        <tr>
+                                <td><button><a href="usuarios.php"><strong>Usuarios Registrados</strong></a></button></td>                  
+                        </tr>
+                        </table>
                     </div>
                 </div>
             </center>
