@@ -35,7 +35,6 @@
 
 
 <html>
-    <link rel="stylesheet" href="style.css" type="text/css" />
 	<head>
 		<title>Login</title>
                 <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
@@ -47,11 +46,12 @@
 	
 	<body>
             
-            <label>Registro De Escrituras </label>
+            
             <br>
             <br>
             <section>
                 <div class="container"><!--Inicio de Sesion -->
+                    <h1>Registro De Escrituras </h1>
                     <div class="main">
                         <h2>Iniciar Sesión</h2>
                         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" id="sesion" name="iniciosesion" >
