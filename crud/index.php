@@ -71,6 +71,9 @@
                 
                 <label> O </label>
 
+<a href="#"  onclick=window.open('../modulos/contacto.php','ventana','width=640,height=480,scrollbars=NO,
+menubar=NO,resizable=NO,titlebar=NO,status=NO');
+return false>Contacto</a>
                 <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
             </form>
             <div class="progress">
