@@ -62,10 +62,12 @@
                                     <input type="text" name="usuario" id="username" required /></br>
                                 </div>
 
-                                <div class="input-field col s45 ">
-                                    <label>Contraseña :</label></br>
-                                    <input type="password" name="password" id="password" required /></br>
-                                </div>  
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="password" type="password" name="password" required="" class="validate">
+                                        <label for="password">Password</label>
+                                    </div>
+      </div>
                             </div>
                             <button class="btn waves-effect waves-light" type="submit" id="submit" name="login">Iniciar Sesion
                                 <i class="material-icons right"></i></button>
