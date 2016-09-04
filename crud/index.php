@@ -49,30 +49,34 @@
             <br>
             <br>
             <section>
-               
-                <div id="body">
-	<div id="content">
-    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-    <table align="center">
-    <tr>
-        <td><input id="usuario" name="usuario" type="text" placeholder="Nombre de Usuario" required/></td>
-    </tr>
-    <tr>
-    <td><input id="password" name="password" type="password" placeholder="Contraseña" required/></td>
-    </tr>
-   
-    <tr>
-    <td><button type="submit" name="login"><strong>Iniciar</strong></button></td>
-    </tr>
-    <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
+                <div class="container"><!--Inicio de Sesion -->
+        <div class="main">
+            <h2>Iniciar Sesión</h2>
+            <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" id="sesion" name="iniciosesion" >
+                <div class="row" id="content">
+                    <div class="input-field col s45 ">
+                        <label>Usuario:</label></br>
+                        <input type="text" name="usuario" id="username" required /></br>
+                    </div>
+                
+                    <div class="input-field col s45 ">
+                        <label>Contraseña :</label></br>
+                        <input type="password" name="password" id="password" required /></br>
+                    </div>  
+                </div>
+                <button class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3"
+                        type="submit" id="submit" name="login"> Iniciar Sesion<i class="mdi-content-send right"></i></button>
+                
+                <label> O </label>
 
-    <tr> <a href="registro_usuario.php">Registrarse</a></tr>
-    <tr>
-    <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
-    </tr>
-    </table>
-    </form>
+                <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
+            </form>
+
+             <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
+        </div>
     </div>
+         
+                
                
             
             </body>
