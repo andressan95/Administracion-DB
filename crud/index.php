@@ -66,7 +66,10 @@
                 
 
                 </div>
-                <button class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3"
+  <button class="btn waves-effect waves-light" type="submit" id="submit" name="login" >Submit
+    <i class="material-icons right">send</i>
+  </button>
+                        <button class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3"
                         type="submit" id="submit" name="login"> Iniciar Sesion<i class="mdi-content-send right"></i></button>
                 
                 <label> O </label>
