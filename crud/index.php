@@ -54,19 +54,16 @@
             <h2>Iniciar Sesión</h2>
             <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" id="sesion" name="iniciosesion" >
                 <div class="row" id="content">
-                    
-
-                    <div class="row">    
+              
                         <div class="input-field col s45 ">
                             <input id="usuario" type="text" name="usuario" class="validate" required />
                         <label for="usuario">Usuario:</label>
                     </div>
-                        
                         <div class="input-field col s45">
                             <input id="password" type="password" name="password" class="validate" required="">
                             <label for="password">Password</label>
                         </div>
-                    </div>
+                
 
                 </div>
                 <button class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3"
