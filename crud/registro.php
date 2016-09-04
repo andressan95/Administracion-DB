@@ -1,13 +1,14 @@
 <?php
 require('../conexion.php');
 
-session_start();
-	require '../conexion.php';
-	
-	if(!isset($_SESSION["id_usuario"])){
-		header("Location: index.php");
-	}
-        
+        session_start();
+        require '../conexion.php';
+        if ($_SESSION['tipo_usuario'] == 2) {
+            alert('Acceso Prohibido se redireccionando');
+            header("Location: usuario.php");
+        }
+
+
 $sql = "SELECT id, tipo FROM tipo_usuario";
 $result = $mysqli->query($sql);
 
