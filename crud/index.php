@@ -38,6 +38,9 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
 	<head>
 		<title>Login</title>
+                <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	</head>
 	
 	<body>
@@ -61,6 +64,8 @@
     <tr>
     <td><button type="submit" name="login"><strong>Iniciar</strong></button></td>
     </tr>
+    <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
+
     <tr> <a href="registro_usuario.php">Registrarse</a></tr>
     <tr>
     <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>

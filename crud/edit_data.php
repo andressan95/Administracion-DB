@@ -8,7 +8,6 @@ session_start();
 		header("Location: index.php");
 	}
         if ($_SESSION['tipo_usuario'] == 2) {
-            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
             header("Location: usuario.php");
         }
 

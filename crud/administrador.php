@@ -3,10 +3,13 @@
 	session_start();
 	require '../conexion.php';
 	
-	if(!isset($_SESSION["id_usuario"])){
+        if(!isset($_SESSION["id_usuario"])){
 		header("Location: index.php");
 	}
-	
+        if ($_SESSION['tipo_usuario'] == 2) {
+            header("Location: usuario.php");
+        }
+
         
 	$idUsuario = $_SESSION['id_usuario'];
 	
