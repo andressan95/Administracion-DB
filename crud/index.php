@@ -35,53 +35,46 @@
 
 
 <html>
+    <link rel="stylesheet" href="style.css" type="text/css" />
 	<head>
 		<title>Login</title>
                 <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
-                <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
-                <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-                <script type="text/javascript" src="materialize/js/materialize.js"></script>
-
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	</head>
 	
 	<body>
             
-            
+            <label>Registro De Escrituras </label>
             <br>
             <br>
             <section>
-                                    <h1>Registro De Escrituras </h1>
-
                 <div class="container"><!--Inicio de Sesion -->
-                    <div class="main">
-                        <h2>Iniciar Sesión</h2>
-                        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" id="sesion" name="iniciosesion" >
-                            <div class="row" id="content">
-                                <div class="input-field col s45 ">
-                                    <label>Usuario:</label></br>
-                                    <input type="text" name="usuario" id="username" required /></br>
-                                </div>
-
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="password" type="password" name="password" required="" class="validate">
-                                        <label for="password">Password</label>
-                                    </div>
-      </div>
-                            </div>
-                            <button class="btn waves-effect waves-light" type="submit" id="submit" name="login">Iniciar Sesion
-                                <i class="material-icons right"></i></button>
-
-                            
-                            <label> O </label>
-
-                            <a href="registro_usuario.php" class="btn waves-effect waves-light">Registrarse <i class="mdi-content-send right"></i></a>
-                        </form>
-
-                        <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : ''; ?></div>
+        <div class="main">
+            <h2>Iniciar Sesión</h2>
+            <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" id="sesion" name="iniciosesion" >
+                <div class="row" id="content">
+                    <div class="input-field col s45 ">
+                        <label>Usuario:</label></br>
+                        <input type="text" name="usuario" id="username" required /></br>
                     </div>
+                
+                    <div class="input-field col s45 ">
+                        <label>Contraseña :</label></br>
+                        <input type="password" name="password" id="password" required /></br>
+                    </div>  
                 </div>
-            </section>   
+                <button class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3"
+                        type="submit" id="submit" name="login"> Iniciar Sesion<i class="mdi-content-send right"></i></button>
+                
+                <label> O </label>
+
+                <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
+            </form>
+             <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
+        </div>
+    </div>
+         
                 
                
             
