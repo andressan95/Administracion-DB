@@ -65,12 +65,12 @@
                                 </div>  
                             </div>
                             <button class="btn waves-effect waves-light" type="submit" id="submit" name="login">Iniciar Sesion
-                                <i class="material-icons right">send</i></button>
+                                <i class="material-icons right"></i></button>
 
                             
                             <label> O </label>
 
-                            <a href="registro_usuario.php" class="btn-large waves-effect waves-light btn #81d4fa light-blue lighten-3">Registrarse <i class="mdi-content-send right"></i></a>
+                            <a href="registro_usuario.php" class="btn waves-effect waves-light">Registrarse <i class="mdi-content-send right"></i></a>
                         </form>
 
                         <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : ''; ?></div>
