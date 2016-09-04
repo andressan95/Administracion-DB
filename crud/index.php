@@ -39,8 +39,10 @@
 	<head>
 		<title>Login</title>
                 <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+                <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+                <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+                <script type="text/javascript" src="materialize/js/materialize.js"></script>
+
 	</head>
 	
 	<body>
