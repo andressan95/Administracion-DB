@@ -76,20 +76,21 @@ function delete_id(id)
     </nav>
 <center>
 
-<div id="body">
-	<div id="content">
-    <table align="center"  class="highlight" >
-    <tr>
-    <th colspan="5"><a href="add_data.php">Registrar.</a></th>
-    </tr>
-       
-    <th>Usuario</th>
-    <th>Password</th>
-    <th>Nombre</th>
-    <th>Tipo de Usuario</th>
-    <th colspan="2">Operaciones</th>
-    </tr>
-    <?php
+    <div id="body">
+        <div id="content">
+            <table align="center"  class="highlight" >
+
+                <thead>
+                    <tr>
+
+                        <th data-field="usuario">Usuario</th>
+                        <th data-field="password">Password</th>
+                        <th data-field="nombre">Nombre</th>
+                        <th data-field="tipo_usuario"> Tipo de Usuario</th>
+                        <th data-field="operaciones" colspan="2">Operaciones</th>
+                    </tr>
+                </thead>  
+  <?php
 	$sql_query="SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
                     FROM usuarios
                     inner JOIN personal
