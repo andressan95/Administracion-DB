@@ -66,7 +66,7 @@ if(isset($_POST['btn-update']))
 	{
 		?>
 		<script type="text/javascript">
-		alert('Registro completado');
+		alert('Error al Registrar');
             window.location.href = 'usuarios.php';
 
 		</script>
@@ -139,9 +139,15 @@ if(isset($_POST['btn-cancel']))
 
                     </form>
 
-    <td>
+    <td> 
+        <tr> 
     <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
+    </tr>
+        <tr>
+            
+       
     <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
+    </tr>
     </td>
     </table>
     </form>
