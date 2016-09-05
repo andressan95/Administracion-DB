@@ -30,11 +30,11 @@ if(isset($_POST['btn-update']))
                         inner join personal 
                         on usuarios.id_personal = personal.id                       
                         set  
-                         usuarios.usuario = 'editado',
-                         usuarios.password = 'asd',
-                         personal.nombre = 'asd',
-                         usuario.id_tipo = '1'
-                      where usuarios.id=".$_GET['edit_id'];// sql query for update data into database
+                         usuarios.usuario = '$usuario',
+                         usuarios.password = '$password',
+                         personal.nombre = '$nombre',
+                         usuario.id_tipo = '$tipo_usuario'
+                      where usuarios.id=".$_GET['edit_id']+";";// sql query for update data into database
 	
 	// sql query execution function
 	if(mysql_query($sql_query))
