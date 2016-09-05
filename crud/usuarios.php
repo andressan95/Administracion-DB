@@ -77,7 +77,7 @@ function delete_id(id)
 <center>
 
     
-            <table align="center"  class="responsive-table highlight" >
+            <table align="center"  class="responsive-table highlight bordered" >
 
                 <thead>
                     <tr>
@@ -102,8 +102,8 @@ function delete_id(id)
         while($row=mysql_fetch_row($result_set))
 		{
 		?>
-                <tr class="card-panel light-blue lighten-5">
-                <td><?php echo $row[1]; ?></td>
+                <tr >
+                <td class="card-panel light-blue lighten-5" ><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
             <td><?php echo $row[4]; ?></td>
