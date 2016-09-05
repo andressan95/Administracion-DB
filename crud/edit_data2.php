@@ -28,12 +28,11 @@ if(isset($_POST['btn-update']))
 	$sqlPerson = "update personal set personal.nombre='$nombre' where personal.id = ".$_GET['edit_id'];
 			
 			
-			$sqlUsuario = "update usuarios
-                                      
+			$sqlUsuario = "update usuarios               
                         set  
                          usuarios.usuario ='$usuario',
                          usuarios.password = '$password',
-                         usuario.id_tipo = '$tipo_usuario'
+                         usuarios.id_tipo = '$tipo_usuario'
                       where usuarios.id=".$_GET['edit_id'];
                         
                         
