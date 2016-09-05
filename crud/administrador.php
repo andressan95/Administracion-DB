@@ -46,10 +46,13 @@
                     <div id="content">
                         <table>
                             <tr>
-                                <td><button value="Registro Usuarios"><strong>Registro Usuario</strong><a href="registro.php"></a></button></td>                  
+                                <td> <a class="waves-effect waves-light btn" href="registro.php">
+                                        <i class="material-icons right">cloud</i>Registrar Usuarios</a>
+                                </td>                  
                         </tr>
                         <tr>
-                            <td><button value="Usuarios Registrados"><strong>Usuarios Registrados</strong><a href="usuarios.php"></a></button></td>                  
+                            <td><a class="waves-effect waves-light btn" href="usuarios.php">
+                                        <i class="material-icons right" >cloud</i>Usuarios Registrados</a></td>                  
                         </tr>
                         </table>
                     </div>
