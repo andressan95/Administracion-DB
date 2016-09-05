@@ -84,7 +84,7 @@
 			
 			function validarTipoUsuario()
 			{
-				indice = document.getElementById("tipo_usuario").selectedIndex;
+				indice = document.getElementById("tipo_usuario").selected;
 				if( indice == null) {
 					alert('Seleccione tipo de usuario');
 					return false;
