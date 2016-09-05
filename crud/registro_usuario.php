@@ -128,26 +128,26 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           <input id="password" type="password" name="password" class="validate">
           <label for="password">Password</label>
         </div>
       </div>
          <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           <input id="con_password" type="password" name="con_password" class="validate">
           <label for="con_password">Confirmar Password</label>
         </div>
       </div>
         
-        <div class="input-field col s12">
-    <select id="tipo_usuario" name="tipo_usuario">  
-    <?php while($row = $result->fetch_assoc()){ ?>
-                                <option value="<?php echo $row['id']; ?>" selected><?php echo $row['tipo']; ?></option>
-					<?php }?>
-    </select>
-    <label>Tipo de Usuario:</label>
-  </div>
+        <form action="#">
+    <p>
+        <input name="tipo_usuario" id="tipo_usuario" type="radio" value="2"/>
+      <label for="tipo_usuario">Usuario</label>
+    </p>
+    
+  </form>
+       
      
         <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
         <i class="material-icons right"></i>
