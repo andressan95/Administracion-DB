@@ -136,7 +136,7 @@
 </div>
 <body>
     <div class="row">
-    <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form class="col s12" id="registro" name="registro"  method="POST">
       <div class="row">
         <div class="input-field col s6">
           <input id="nombre" name="nombre" type="text" class="validate" value="<?php echo $fetched_row['nombre']; ?>">
