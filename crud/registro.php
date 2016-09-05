@@ -146,17 +146,16 @@
         </div>
       </div>
         
-        <form action="#">
+       
             <p>
-                <input class="with-gap" name="group1"  id="idtipo_usuario" type="radio" value="2" />
+                <input class="with-gap" name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" />
                 <label for="idtipo_usuario">Usuario</label>
             </p>
             <p>
-                <input class="with-gap" name="group1"  id="idtipo_usuario" type="radio" value="1" checked/>
+                <input class="with-gap" name="tipo_usuario" id="idtipo_usuario" type="radio" value="1" />
                 <label for="idtipo_usuario">Administrador</label>
             </p>
 
-        </form>
 
      
         <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
