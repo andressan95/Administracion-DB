@@ -25,17 +25,36 @@ if(isset($_POST['btn-update']))
 
 	
 	// variables for input data
-	
-	// sql query for update data into database
-      $sql_query = "update usuarios
-                        inner join personal 
-                        on usuarios.id_personal = personal.id                       
+	$sqlPerson = "update personal set personal.nombre='$nombre' where personal.id = ".$_GET['edit_id'];
+			
+			
+			$sqlUsuario = "update usuarios
+                                      
                         set  
-                         usuarios.usuario = '$usuario',
+                         usuarios.usuario ='$usuario',
                          usuarios.password = '$password',
-                         personal.nombre = '$nombre',
                          usuario.id_tipo = '$tipo_usuario'
-                      where usuarios.id=".$_GET['edit_id']+";";// sql query for update data into database
+                      where usuarios.id=".$_GET['edit_id'];
+                        
+                        
+			$resultUsuario = $mysqli->query($sqlUsuario);
+			
+			if($resultUsuario>0)
+			$bandera = true;
+			else
+			$error = "Error al Registrar";
+			
+		
+	// sql query for update data into database
+//      $sql_query = "update usuarios
+//                        inner join personal 
+//                        on usuarios.id_personal = personal.id                       
+//                        set  
+//                         usuarios.usuario = '$usuario',
+//                         usuarios.password = '$password',
+//                         personal.nombre = '$nombre',
+//                         usuario.id_tipo = '$tipo_usuario'
+//                      where usuarios.id=".$_GET['edit_id']+";";// sql query for update data into database
 	
 	// sql query execution function
 	if(mysql_query($sql_query))
