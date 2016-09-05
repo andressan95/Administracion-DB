@@ -109,9 +109,53 @@
     </div>
 </div>
 <body>
+    <div class="row">
+    <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="nombre" name="nombre" type="text" class="validate">
+          <label for="nombre">Nombre</label>
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <input id="usuario" name="usuario" type="text" class="validate">
+          <label for="usuario">Usuario</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+         <div class="row">
+        <div class="input-field col s12">
+          <input id="con_password" type="password" name="con_password" class="validate">
+          <label for="con_password">Confirmar Password</label>
+        </div>
+      </div>
+        
+        <div class="input-field col s12">
+    <select id="tipo_usuario" name="tipo_usuario">  
+    <?php while($row = $result->fetch_assoc()){ ?>
+                                <option value="<?php echo $row['id']; ?>" selected><?php echo $row['tipo']; ?></option>
+					<?php }?>
+    </select>
+    <label>Tipo de Usuario:</label>
+  </div>
+     
+        <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
+        <i class="material-icons right"></i>
+        </button>
+        
+    </form>
+        
+        
+  </div>
             <div class="classname">
 		<form id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
-			<div><label>Nombre:</label><input id="nombre"name="nombre" type="text" ></div>
+			<div><label>Nombre:</label><input id="nombre" name="nombre" type="text" ></div>
 			<br />
 			
 			<div><label>Usuario:</label><input id="usuario" name="usuario" type="text"></div>
