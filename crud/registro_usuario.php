@@ -157,32 +157,7 @@
         
         
   </div>
-            <div class="classname">
-		<form id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
-			<div><label>Nombre:</label><input id="nombre" name="nombre" type="text" ></div>
-			<br />
-			
-			<div><label>Usuario:</label><input id="usuario" name="usuario" type="text"></div>
-			<br />
-			
-			<div><label>Password:</label><input id="password" name="password" type="password"></div>
-			<br />
-			
-			<div><label>Confirmar Password:</label><input id="con_password" name="con_password" type="password"></div>
-			<br />
-			
-			<div><label>Tipo Usuario:</label>
-                            <select id="tipo_usuario" name="tipo_usuario">
-					<?php while($row = $result->fetch_assoc()){ ?>
-                                <option value="<?php echo $row['id']; ?>" selected><?php echo $row['tipo']; ?></option>
-					<?php }?>
-				</select>
-			</div>
-			<br />
-			
-			<div><input name="registar" type="button" value="Registrar" onClick="validar();"></div> 
-		</form>
-            </div>
+          
 		<?php if($bandera) { ?>
 			<h1>Registro exitoso</h1>
 			<a href="welcome.php">Regresar</a>
