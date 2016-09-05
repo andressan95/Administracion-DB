@@ -49,13 +49,15 @@ if (isset($_POST['btnupdate'])) {
         ?>
         <script type="text/javascript">
             alert('Usuario Actualizado');
-            window.location.href = 'edit_data.php';
+            window.location.href = 'usuarios.php';
         </script>
         <?php
     } else {
         ?>
         <script type="text/javascript">
             alert('Error al actualizar');
+                        window.location.href = 'usuarios.php';
+
         </script>
         <?php
     }
