@@ -90,8 +90,9 @@
 //                                    {msgValidacion = msgValidacion+alert('Seleccione tipo de usuario');}
 
 //
-				indice = document.getElementById("idtipo_usuario").checked;
-				if( indice == null) {
+				administrador = document.getElementById("idadministrador").checked;
+                                usuario = document.getElementById("idusuario").checked;
+				if( usuario == null || administrador == null) {
 					alert('Seleccione tipo de usuario');
 					return false;
 				} else { return true;}
@@ -148,12 +149,12 @@
         
        <form action="#">
     <p>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Red</label>
+        <input name="tipo_usuario" type="radio" id="idadministrador" value="1" />
+      <label for="idadministrador">Administrador</label>
     </p>
     <p>
-      <input name="group1" type="radio" id="test2" />
-      <label for="test2">Yellow</label>
+        <input name="tipo_usuario" type="radio" id="idusuario" value="2" />
+      <label for="idusuario">Usuario</label>
     </p>
     
   </form>
