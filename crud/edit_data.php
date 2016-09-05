@@ -84,6 +84,65 @@ if (isset($_POST['btn-cancel'])) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <script>
+			function validarNombre()
+			{
+				valor = document.getElementById("nombre").value;
+				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+					alert('Falta Llenar Nombre');
+					return false;
+				} else { return true;}
+			}
+			
+			function validarUsuario()
+			{
+				valor = document.getElementById("usuario").value;
+				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+					alert('Falta Llenar Usuario');
+					return false;
+				} else { return true;}
+			}
+			
+			function validarPassword()
+			{
+				valor = document.getElementById("password").value;
+				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+					alert('Falta Llenar Password');
+					return false;
+					} else { 
+					valor2 = document.getElementById("con_password").value;
+					
+					if(valor == valor2) { return true; }
+					else { alert('Las contraseña no coinciden'); return false;}
+				}
+			}
+			
+			function validarTipoUsuario()
+			{
+//                            var radioButElegido = false;
+//                            for (var i=0; i<radioButElegido.length; i++) {
+//                                  if (radioButElegido[i].checked == true) { radioButElegido=true;} }
+//                                    if (radioButElegido == false)
+//                                    {msgValidacion = msgValidacion+alert('Seleccione tipo de usuario');}
+
+//
+				administrador = document.getElementById("idadministrador").checked;
+                                usuario = document.getElementById("idusuario").checked;
+				if( usuario == null || administrador == null) {
+					alert('Seleccione tipo de usuario');
+					return false;
+				} else { return true;}
+			}
+			
+			function validar()
+			{
+				if(validarNombre() && validarUsuario() && validarPassword() && validarTipoUsuario())
+				{
+					document.registro.submit();
+				}
+			}
+			
+		</script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Actualizar</title>
         <link rel="stylesheet" href="style.css" type="text/css" />
