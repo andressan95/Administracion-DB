@@ -44,7 +44,6 @@
             
 	<?php if($_SESSION['tipo_usuario']==1){?>
             
-            <center>
                 
                 <nav>
                         <div class="nav-wrapper">
@@ -65,13 +64,9 @@
                             </ul>
                         </div>
                     </nav>
-                <div id="header">
-                    <div id="content">
-                        <label><?php echo 'Bienvenid@ ' . utf8_decode($row['nombre']); ?></label>
-                        <label><a href="logout.php">Cerrar Sesi&oacute;n</a> </label>
-                    </div>
-                </div>
                 
+ <center>
+
                 <div id="body">
                     <div id="content">
                         <table>

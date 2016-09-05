@@ -108,7 +108,6 @@ if(isset($_POST['btn-cancel']))
         </script>
 </head>
 <body>
-<center>
 
 
     <nav>
@@ -131,6 +130,7 @@ if(isset($_POST['btn-cancel']))
         </div>
   </nav>
         
+<center>
 
 <div id="body">
 	<div id="content">

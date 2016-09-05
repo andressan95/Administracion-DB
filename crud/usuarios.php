@@ -55,7 +55,6 @@ function delete_id(id)
 </script>
 </head>
 <body>
-<center>
 
   <nav>
         <div class="nav-wrapper">
@@ -75,13 +74,15 @@ function delete_id(id)
             </ul>
         </div>
     </nav>
+<center>
 
 <div id="body">
 	<div id="content">
-    <table align="center">
+    <table align="center"  class="highlight" >
     <tr>
     <th colspan="5"><a href="add_data.php">Registrar.</a></th>
     </tr>
+       
     <th>Usuario</th>
     <th>Password</th>
     <th>Nombre</th>
