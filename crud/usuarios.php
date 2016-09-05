@@ -82,7 +82,7 @@ function delete_id(id)
                 <thead>
                     <tr>
 
-                        <th class="card-panel teal lighten-2" data-field="usuario">Usuario</th>
+                        <th class="blue-text text-darken-2" data-field="usuario">Usuario</th>
                         <th class="card-panel teal lighten-2"data-field="password">Password</th>
                         <th class="card-panel teal lighten-2"data-field="nombre">Nombre</th>
                         <th class="card-panel teal lighten-2"data-field="tipo_usuario"> Tipo de Usuario</th>
