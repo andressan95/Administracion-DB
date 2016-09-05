@@ -76,8 +76,7 @@ function delete_id(id)
     </nav>
 <center>
 
-    <div id="body">
-        <div id="content">
+    
             <table align="center"  class="highlight" >
 
                 <thead>
@@ -125,8 +124,7 @@ function delete_id(id)
 	}
 	?>
     </table>
-    </div>
-</div>
+   
 
 </center>
 </body>
