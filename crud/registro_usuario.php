@@ -142,7 +142,7 @@
         
         <form action="#">
     <p>
-        <input name="tipo_usuario" id="tipo_usuario" type="radio" value="2"/>
+        <input name="tipo_usuario" id="tipo_usuario" type="radio" value="2" checked/>
       <label for="tipo_usuario">Usuario</label>
     </p>
     
