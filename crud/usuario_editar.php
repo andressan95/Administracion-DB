@@ -139,32 +139,32 @@
     <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
       <div class="row">
         <div class="input-field col s6">
-          <input id="nombre" name="nombre" type="text" class="validate">
+          <input id="nombre" name="nombre" type="text" class="validate" value="<?php echo $fetched_row['nombre']; ?>">
           <label for="nombre">Nombre</label>
         </div>
       </div>
         <div class="row">
         <div class="input-field col s6">
-          <input id="usuario" name="usuario" type="text" class="validate">
+          <input id="usuario" name="usuario" type="text" class="validate" value="<?php echo $fetched_row['usuario']; ?>">
           <label for="usuario">Usuario</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate">
+          <input id="password" type="password" name="password" class="validate" value="<?php echo $fetched_row['password']; ?>">
           <label for="password">Password</label>
         </div>
       </div>
          <div class="row">
         <div class="input-field col s6">
-          <input id="con_password" type="password" name="con_password" class="validate">
+          <input id="con_password" type="password" name="con_password" class="validate" value="<?php echo $fetched_row['password']; ?>">
           <label for="con_password">Confirmar Password</label>
         </div>
       </div>
         
        <form action="#">
     <p>
-        <input name="tipo_usuario" type="radio" id="idadministrador" value="1" />
+        <input name="tipo_usuario" type="radio" id="idadministrador" value="1"  />
       <label for="idadministrador">Administrador</label>
     </p>
     <p>
