@@ -1,8 +1,9 @@
 <?php
 
 	
-	require('dbconfig.php');
-	
+	require('../conexion.php');
+	 include_once ('dbconfig.php');
+
 	if(isset($_GET['edit_id']))
 {
 	   $sql_query = "SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
