@@ -1,7 +1,7 @@
 <?php
 
 	
-	 include_once ('dbconfig.php');
+	 include_once ('../conexion.php');
 
 	if(isset($_GET['edit_id']))
 {
