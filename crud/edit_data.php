@@ -20,7 +20,7 @@ if (isset($_GET['edit_id'])) {
     $result_set = mysql_query($sql_query);
     $fetched_row = mysql_fetch_array($result_set);
 }
-if (isset($_POST['btn-update'])) {
+if (isset($_POST['update'])) {
     // variables for input data
     $nombre = mysqli_real_escape_string($mysqli, $_POST['nombre']);
     $usuario = mysqli_real_escape_string($mysqli, $_POST['usuario']);
@@ -119,7 +119,7 @@ if (isset($_POST['btn-update'])) {
 			{
 				if(validarNombre() && validarUsuario() && validarPassword() && validarTipoUsuario())
 				{
-					document.registro.submit();
+					document.update.submit();
 				}
 			}
 			
@@ -179,7 +179,7 @@ if (isset($_POST['btn-update'])) {
                     </form>
 
                     
-                    <button class="btn waves-effect waves-light" type="submit" value="actualizar" id="submit" name="btn-update" onClick="validar();" >Actualizar
+                    <button class="btn waves-effect waves-light" type="submit" name="update" onClick="validar();" >Actualizar
                         <i class="material-icons right"></i>
                     </button>
                     <a class="waves-effect waves-light btn" href="usuarios.php">
