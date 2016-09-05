@@ -1,5 +1,5 @@
 <?php
-include_once '../conexion.php';
+	require('../conexion.php');
 if(isset($_GET['edit_id']))
 {
 	   $sql_query = "SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
