@@ -40,7 +40,7 @@ if (isset($_POST['btnupdate'])) {
                          usuarios.usuario = '$usuario',
                          usuarios.password = '$password',
                          personal.nombre = '$nombre',
-                         usuario.id_tipo = '$tipo_usuario'
+                         usuarios.id_tipo = '$tipo_usuario'
                       where usuarios.id=".$_GET['edit_id'];
         // sql query for update data into database
 
