@@ -1,5 +1,5 @@
 <?php
-		
+
 	
 	require('../conexion.php');
 	
@@ -40,9 +40,10 @@
 			$error = "Error al Registrar";
 			
 		}
-                
-	}	
+	}
+	
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -111,7 +112,7 @@
 </div>
 <div id="body">
 	<div id="content">
-    <form method="post">
+    <form id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" >
     <table align="center">
     <tr>
     <td align="center"><a href="index.php">Inicio</a></td>

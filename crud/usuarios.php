@@ -1,17 +1,16 @@
 <?php
 include_once 'dbconfig.php';
-//session_start();
-//	require '../conexion.php';
-//	
-//	if(!isset($_SESSION["id_usuario"])){
-//		header("Location: index.php");
-//	}
-//         session_start();
-//        if ($_SESSION['tipo_usuario'] == 2) {
-//            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
-//            header("Location: usuario.php");
-//        }
-        
+session_start();
+	require '../conexion.php';
+	
+	if(!isset($_SESSION["id_usuario"])){
+		header("Location: index.php");
+	}
+         session_start();
+        if ($_SESSION['tipo_usuario'] == 2) {
+            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
+            header("Location: usuario.php");
+        }
 // delete condition
 if(isset($_GET['delete_id']))
 {
