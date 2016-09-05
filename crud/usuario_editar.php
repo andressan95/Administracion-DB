@@ -40,7 +40,7 @@
                          usuarios.password ='$password',
                          personal.nombre ='$nombre',
                          usuario.id_tipo ='$tipo_usuario'
-                      where usuarios.id=".$_GET['edit_id']+";";
+                      where usuarios.id=".$_GET['edit_id'];
                         
                         
 			$resultUsuario = $mysqli->query($sqlUsuario);
