@@ -3,7 +3,6 @@ include_once 'dbconfig.php';
 session_start();
 require '../conexion.php';
 
-session_start();
 if (!isset($_SESSION["id_usuario"])) {
     header("Location: index.php");
 }
@@ -33,16 +32,15 @@ if (isset($_POST['btn-update'])) {
 
         // variables for input data
         // sql query for update data into database
+ 
         $sql_query = "update usuarios
                         inner join personal 
-                        on usuarios.id_personal = personal.id
-                        inner join tipo_usuario
-                        on usuarios.id_tipo= tipo_usuario.id
+                        on usuarios.id_personal = personal.id                       
                         set  
                          usuarios.usuario = '$usuario',
                          usuarios.password = '$password',
                          personal.nombre = '$nombre',
-                         tipo_usuario.id = '$tipo_usuario'
+                         usuario.id_tipo = $tipo_usuario
                       where usuarios.id=".$_GET['edit_id'];
         // sql query for update data into database
 
@@ -50,14 +48,14 @@ if (isset($_POST['btn-update'])) {
     if (mysql_query($sql_query)) {
         ?>
         <script type="text/javascript">
-            alert('Data Are Updated Successfully');
+            alert('Usuario Actualizado');
             window.location.href = 'edit_data.php';
         </script>
         <?php
     } else {
         ?>
         <script type="text/javascript">
-            alert('error occured while updating data');
+            alert('Error al actualizar');
         </script>
         <?php
     }
@@ -142,7 +140,7 @@ if (isset($_POST['btn-update'])) {
                 </div>
             </div>
             <div class="row">
-                <form class="col s12" method="POST">
+                <form class="col s12" method="post">
                     <div class="row">
                         <div class="input-field col s6">
                             <input id="nombre" name="nombre" type="text" class="validate" value="<?php echo $fetched_row['nombre']; ?>" required>
