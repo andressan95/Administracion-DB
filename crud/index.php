@@ -41,11 +41,25 @@
                 <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+
 	</head>
 	
 	<body>
-            
-            <label>Registro De Escrituras </label>
+            <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align">Registro de Escrituras </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+               
+                <li><a href="registro_usuario.php.php">Registrarse</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+             <li><a href="registro_usuario.php.php">Registrarse</a></li>
+
+            </ul>
+        </div>
+    </nav>
             <br>
             <br>
             <section>
