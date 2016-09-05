@@ -2,7 +2,12 @@
 include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
-	$sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
+	   $sql_query = "SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
+                    FROM usuarios
+                    inner JOIN personal
+                    ON usuarios.id_personal=personal.id
+                    inner join tipo_usuario
+                    on usuarios.id_tipo = tipo_usuario.id where usuarios.id =".$_GET['edit_id'];
 	$result_set=mysql_query($sql_query);
 	$fetched_row=mysql_fetch_array($result_set);
 }
