@@ -103,7 +103,7 @@ function delete_id(id)
 		{
 		?>
                 <tr >
-                <td class="card-panel light-blue lighten-5" ><?php echo $row[1]; ?></td>
+                <td><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
             <td><?php echo $row[4]; ?></td>
