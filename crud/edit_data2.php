@@ -43,7 +43,7 @@ if(isset($_POST['btn-update']))
 		?>
 		<script type="text/javascript">
 		alert('Datos actualizados Correctamente');
-		window.location.href='edit_data2.php';
+            window.location.href = 'usuarios.php';
 		</script>
 		<?php
 	}
@@ -52,7 +52,7 @@ if(isset($_POST['btn-update']))
 		?>
 		<script type="text/javascript">
 		alert('Registro completado');
-                		window.location.href='registrados.php';
+            window.location.href = 'usuarios.php';
 
 		</script>
 		<?php
