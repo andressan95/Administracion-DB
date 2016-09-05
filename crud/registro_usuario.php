@@ -84,17 +84,17 @@
 			
 			function validarTipoUsuario()
 			{
-//                            var radioButElegido = false;
-//                            for (var i=0; i<indice.length; i++) {
-//                                  if (indice[i].checked == true) { radioButElegido=true;} }
-//                                    if (radioButElegido == false){msgValidacion = msgValidacion+'<p>(*) No hay elegido tratamiento sr. o sra. </p> ';}
+                            var radioButElegido = false;
+                            for (var i=0; i<radioButElegido.length; i++) {
+                                  if (radioButElegido[i].checked == true) { radioButElegido=true;} }
+                                    if (radioButElegido == false){msgValidacion = msgValidacion+'<p>(*) No hay elegido tratamiento sr. o sra. </p> ';}
 
-
-				indice = document.getElementById("idtipo_usuario").selected;
-				if( indice == null) {
-					alert('Seleccione tipo de usuario');
-					return false;
-				} else { return true;}
+//
+//				indice = document.getElementById("idtipo_usuario").selected;
+//				if( indice == null) {
+//					alert('Seleccione tipo de usuario');
+//					return false;
+//				} else { return true;}
 			}
 			
 			function validar()
