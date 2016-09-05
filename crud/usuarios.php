@@ -32,7 +32,7 @@ function edt_id(id)
 {
 	if(confirm('Sure to edit ?'))
 	{
-		window.location.href='edit_data.php?edit_id='+id;
+		window.location.href='edit_data2.php?edit_id='+id;
 	}
 }
 function delete_id(id)
