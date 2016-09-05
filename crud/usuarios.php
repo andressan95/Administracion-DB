@@ -82,11 +82,11 @@ function delete_id(id)
                 <thead>
                     <tr>
 
-                        <th class="card-panel teal lighten-2 blue-text text-lighten-5" data-field="usuario">Usuario</th>
-                        <th class="card-panel teal lighten-2"data-field="password">Password</th>
-                        <th class="card-panel teal lighten-2"data-field="nombre">Nombre</th>
-                        <th class="card-panel teal lighten-2"data-field="tipo_usuario"> Tipo de Usuario</th>
-                        <th class="card-panel teal lighten-2"data-field="operaciones" colspan="2">Operaciones</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5" data-field="usuario">Usuario</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="password">Password</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="nombre">Nombre</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="tipo_usuario"> Tipo de Usuario</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="operaciones" colspan="2">Operaciones</th>
                     </tr>
                 </thead>  
   <?php
@@ -103,7 +103,7 @@ function delete_id(id)
 		{
 		?>
             <tr>
-            <td><?php echo $row[1]; ?></td>
+                <td class=" card-panel light-blue lighten-5 blue-text text-blue-grey darken-3 "><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
             <td><?php echo $row[4]; ?></td>
