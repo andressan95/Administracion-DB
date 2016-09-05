@@ -100,12 +100,16 @@
 			}
 			
 		</script>
-<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+ <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </head>
 
 <div id="header">
 	<div id="content">
-    <label>CRUD Operations With PHP and MySql - <a href="http://www.codingcage.com" target="_blank">By Coding Cage</a></label>
+    <label>REGISTRAR USUARIO</label>
     </div>
 </div>
 <body>
