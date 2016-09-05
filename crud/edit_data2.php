@@ -88,15 +88,23 @@ if(isset($_POST['btn-cancel']))
 <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
 </head>
 <body>
 <center>
 
-<div id="header">
-	<div id="content">
-    <label>Edit</label>
-    </div>
-</div>
+
+     <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li class="active"><a href="badges.html">Components</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
 <div id="body">
 	<div id="content">
@@ -141,8 +149,8 @@ if(isset($_POST['btn-cancel']))
 
     <td>  
         
-        <button type="submit" name="btn-update"><strong>UPDATE</strong></button> <br>
-    <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
+        <button type="submit" name="btn-update"><strong>Actualizar</strong></button> <br><br> <br>
+    <button type="submit" name="btn-cancel"><strong>Cancelar</strong></button>
     </td>
     </table>
     </form>
