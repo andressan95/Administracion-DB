@@ -13,29 +13,63 @@ session_start();
 
 if(isset($_GET['edit_id']))
 {
-	$sql_query="SELECT * FROM usuarios WHERE id=".$_GET['edit_id'];
+	$sql_query="SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
+                    FROM usuarios
+                    inner JOIN personal
+                    ON usuarios.id_personal=personal.id
+                    inner join tipo_usuario
+                    on usuarios.id_tipo = tipo_usuario.id where usuarios.id =".$_GET['edit_id'];
 	$result_set=mysql_query($sql_query);
 	$fetched_row=mysql_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
 	// variables for input data
-	$usuario = $_POST['usuario'];
-	$password = $_POST['password'];
-	$city_name = $_POST['id_personal'];
+	 $nombre = mysqli_real_escape_string($mysqli, $_POST['nombre']);
+    $usuario = mysqli_real_escape_string($mysqli, $_POST['usuario']);
+    $password = mysqli_real_escape_string($mysqli, $_POST['password']);
+    $tipo_usuario = $_POST['tipo_usuario'];
+    $sha1_pass = sha1($password);
+
+    $error = '';
+
+    $sqlUser = "SELECT id FROM usuarios WHERE usuario = '$usuario'";
+    $resultUser = $mysqli->query($sqlUser);
+    $rows = $resultUser->num_rows;
+
+    if ($rows > 0) {
+        $error = "El usuario ya existe";
+    } else {
 	// variables for input data
 	
 	// sql query for update data into database
-	$sql_query = "UPDATE usuarios SET usuario='$first_name',password='$last_name' WHERE id=".$_GET['edit_id'];
+	$sql_query = "update usuarios
+                        inner join personal 
+                        on usuarios.id_personal = personal.id
+                        inner join tipo_usuario
+                        on usuarios.id_tipo= tipo_usuario.id
+                        set  
+                         usuarios.usuario = '$usuario',
+                         usuarios.password = '$password',
+                         personal.nombre = '$nombre',
+                         tipo_usuario.tipo = '$tipo_usuario'
+                      where usuarios.id=".$_GET['edit_id'];
 	// sql query for update data into database
-	
+        
+        
+	 if ($resultUsuario > 0)
+            $bandera = true;
+        else
+            $error = "Error al Registrar";
+    }
+    
 	// sql query execution function
 	if(mysql_query($sql_query))
 	{
 		?>
 		<script type="text/javascript">
 		alert('Data Are Updated Successfully');
-		window.location.href='index.php';
+		window.location.href='edit_data.php';
 		</script>
 		<?php
 	}
@@ -70,6 +104,45 @@ if(isset($_POST['btn-cancel']))
     </div>
 </div>
 
+    <div id="body">
+                <div id="content">
+                    <form method="post" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" >
+                        <table align="center">
+                            <tr>
+                                <td align="center"><a href="index.php">Inicio</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="nombre" placeholder="Nombre Completo" value="<?php echo $fetched_row['nombre']; ?>" required /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="usuario" placeholder="Nombre de Usuario" value="<?php echo $fetched_row['usuario']; ?>"required /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="password" name="password" placeholder="Password" value="<?php echo $fetched_row['password']; ?>" required /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="password" name="con_password" placeholder="Confirmar password"  value="<?php echo $fetched_row['password']; ?>"required /></td>
+                            </tr>
+                            <tr> <td> <label>Tipo Usuario:</label>
+                                    <select id="tipo_usuario" name="tipo_usuario">
+                                                           <?php while ($row = $result->fetch_assoc()) { ?>
+                                            <option value="<?php echo $fetched_row['id']; ?>" selected><?php echo $fetched_row['tipo']; ?></option>
+                                                           <?php } ?>
+                                    </select>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
+                                <button name="btn-cancel"><strong>Cancel</strong></button>
+                               </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+    
+    
+    
 <div id="body">
 	<div id="content">
     <form method="post">
