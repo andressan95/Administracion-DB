@@ -146,17 +146,24 @@
         </div>
       </div>
         
-       
-            <p>
-                <input class="with-gap" name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" />
-                <label for="idtipo_usuario">Usuario</label>
-            </p>
-            <p>
-                <input class="with-gap" name="tipo_usuario" id="idtipo_usuario" type="radio" value="1" />
-                <label for="idtipo_usuario">Administrador</label>
-            </p>
-
-
+       <form action="#">
+    <p>
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1">Red</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2">Yellow</label>
+    </p>
+    <p>
+      <input class="with-gap" name="group1" type="radio" id="test3"  />
+      <label for="test3">Green</label>
+    </p>
+      <p>
+        <input name="group1" type="radio" id="test4" disabled="disabled" />
+        <label for="test4">Brown</label>
+    </p>
+  </form>
      
         <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
         <i class="material-icons right"></i>
