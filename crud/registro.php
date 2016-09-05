@@ -1,14 +1,14 @@
 <?php
 require('../conexion.php');
 
-        session_start();
-        if(!isset($_SESSION["id_usuario"])){
-		header("Location: index.php");
-	}
-        if ($_SESSION['tipo_usuario'] == 2) {
-            header("Location: usuario.php");
-        }
-
+//        session_start();
+//        if(!isset($_SESSION["id_usuario"])){
+//		header("Location: index.php");
+//	}
+//        if ($_SESSION['tipo_usuario'] == 2) {
+//            header("Location: usuario.php");
+//        }
+//
 
 $sql = "SELECT id, tipo FROM tipo_usuario";
 $result = $mysqli->query($sql);
