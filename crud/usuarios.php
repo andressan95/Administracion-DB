@@ -83,11 +83,11 @@ function delete_id(id)
                 <thead>
                     <tr>
 
-                        <th data-field="usuario">Usuario</th>
-                        <th data-field="password">Password</th>
-                        <th data-field="nombre">Nombre</th>
-                        <th data-field="tipo_usuario"> Tipo de Usuario</th>
-                        <th data-field="operaciones" colspan="2">Operaciones</th>
+                        <th class="card-panel teal lighten-2" data-field="usuario">Usuario</th>
+                        <th class="card-panel teal lighten-2"data-field="password">Password</th>
+                        <th class="card-panel teal lighten-2"data-field="nombre">Nombre</th>
+                        <th class="card-panel teal lighten-2"data-field="tipo_usuario"> Tipo de Usuario</th>
+                        <th class="card-panel teal lighten-2"data-field="operaciones" colspan="2">Operaciones</th>
                     </tr>
                 </thead>  
   <?php
