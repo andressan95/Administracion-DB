@@ -51,7 +51,9 @@ if(isset($_POST['btn-update']))
 	{
 		?>
 		<script type="text/javascript">
-		alert('Error al registrar');
+		alert('Registro completado');
+                		window.location.href='registrados.php';
+
 		</script>
 		<?php
 	}
