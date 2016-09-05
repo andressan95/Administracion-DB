@@ -85,15 +85,18 @@ if (isset($_POST['btn-cancel'])) {
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>CRUD Operations With PHP and MySql - By Coding Cage</title>
+        <title>Actualizar</title>
         <link rel="stylesheet" href="style.css" type="text/css" />
+         <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     </head>
     <body>
         <center>
 
             <div id="header">
                 <div id="content">
-                    <label>CRUD</label>
+                    <label>Actualizar</label>
                 </div>
             </div>
             <div class="row">
@@ -135,14 +138,11 @@ if (isset($_POST['btn-cancel'])) {
 
                     </form>
 
-                    <tr>
-                        <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
-                        <button name="btn-cancel"><strong>Cancel</strong></button>
-                    </tr>
+                    
                     <button class="btn waves-effect waves-light" type="submit" value="actualizar" id="submit" name="btn-update" onClick="validar();" >Actualizar
                         <i class="material-icons right"></i>
                     </button>
-                    <button class="btn waves-effect waves-light" value="cancelar" name="btn-cancel" >Actualizar
+                    <button class="btn waves-effect waves-light" value="cancelar" name="btn-cancel" >Cancelar
                         <i class="material-icons right"></i>
                     </button>
 
