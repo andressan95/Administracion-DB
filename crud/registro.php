@@ -2,7 +2,16 @@
 
 	
 	require('../conexion.php');
+	session_start();
 	
+	if(!isset($_SESSION["id_usuario"])){
+		header("Location: index.php");
+	}
+         session_start();
+        if ($_SESSION['tipo_usuario'] == 2) {
+            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
+            header("Location: usuario.php");
+        }
 	
 	$result=$mysqli->query($sql);
 	
@@ -108,17 +117,36 @@
 			
 		</script>
 
-
- <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+        <script> 
+        
+         $( document ).ready(function(){
+              $(".button-collapse").sideNav();
+         }) 
+        </script>
 </head>
 
-<div id="header">
-	<div id="content">
-    <label>REGISTRAR USUARIO</label>
-    </div>
-</div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align">Registro de Usuarios </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="administrador.php">Panel Administrador</a></li>
+                <li><a href="usuarios.php">Usuarios</a></li>
+                <li><a href="registro.php">Registro</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="administrador.php">Panel Administrador</a></li>
+                <li><a href="usuarios.php">Usuarios</a></li>
+                <li><a href="registro.php">Registro</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </nav>
 <body>
     <div class="row">
     <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">

@@ -27,6 +27,16 @@ if(isset($_GET['delete_id']))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>CRUD</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+        <script> 
+        
+         $( document ).ready(function(){
+              $(".button-collapse").sideNav();
+         }) 
+        </script>
 <script type="text/javascript">
 function edt_id(id)
 {
@@ -47,11 +57,24 @@ function delete_id(id)
 <body>
 <center>
 
-<div id="header">
-	<div id="content">
-    <label>CRUD</label>
-    </div>
-</div>
+  <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align">Usuarios Registrados </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="administrador.php">Panel Administrador</a></li>
+                <li><a href="usuarios.php">Usuarios</a></li>
+                <li><a href="registro.php">Registro</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="administrador.php">Panel Administrador</a></li>
+                <li><a href="usuarios.php">Usuarios</a></li>
+                <li><a href="registro.php">Registro</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <div id="body">
 	<div id="content">

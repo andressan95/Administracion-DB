@@ -1,6 +1,17 @@
 <?php
 	require('../conexion.php');
         include_once 'dbconfig.php';
+        
+        session_start();
+	
+	if(!isset($_SESSION["id_usuario"])){
+		header("Location: index.php");
+	}
+         session_start();
+        if ($_SESSION['tipo_usuario'] == 2) {
+            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
+            header("Location: usuario.php");
+        }
 if(isset($_GET['edit_id']))
 {
 	   $sql_query = "SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
@@ -100,23 +111,24 @@ if(isset($_POST['btn-cancel']))
 <center>
 
 
-      <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-       <li><a href="usuarios.php">Usuarios</a></li>
-        <li><a href="registro.php">Registro</a></li>
-        <li><a href="logout.php">Cerrar Sesion</a></li>
-        <li><a href="administrador.php">Administrador</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="usuarios.php">Usuarios</a></li>
-        <li><a href="registro.php">Registro</a></li>
-        <li><a href="logout.php">Cerrar Sesion</a></li>
-        <li><a href="administrador.php">Administrador</a></li>
-      </ul>
-    </div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align">Actualizar Usuario</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="administrador.php">Panel Administrador</a></li>
+                <li><a href="usuarios.php">Usuarios</a></li>
+                <li><a href="registro.php">Registro</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="administrador.php">Panel Administrador</a></li>
+
+                <li><a href="usuarios.php">Usuarios</a></li>
+                <li><a href="registro.php">Registro</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+        </div>
   </nav>
         
 
