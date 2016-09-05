@@ -139,15 +139,10 @@ if(isset($_POST['btn-cancel']))
 
                     </form>
 
-    <td> 
-        <tr> 
-    <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
-    </tr>
-        <tr>
-            
-       
+    <td>  
+        
+        <button type="submit" name="btn-update"><strong>UPDATE</strong></button> <br>
     <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
-    </tr>
     </td>
     </table>
     </form>
