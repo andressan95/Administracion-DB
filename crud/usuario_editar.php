@@ -40,10 +40,10 @@
                         inner join personal 
                         on usuarios.id_personal = personal.id                       
                         set  
-                         usuarios.usuario = '$usuario',
-                         usuarios.password = '$password',
-                         personal.nombre = '$nombre',
-                         usuario.id_tipo = '$tipo_usuario'
+                         usuarios.usuario ='$usuario',
+                         usuarios.password ='$password',
+                         personal.nombre ='$nombre',
+                         usuario.id_tipo ='$tipo_usuario'
                       where usuarios.id=".$_GET['edit_id']+";";
                         
                         
