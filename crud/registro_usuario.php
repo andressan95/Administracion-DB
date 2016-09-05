@@ -102,49 +102,48 @@
 		</script>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body>
-<center>
 
 <div id="header">
 	<div id="content">
     <label>CRUD Operations With PHP and MySql - <a href="http://www.codingcage.com" target="_blank">By Coding Cage</a></label>
     </div>
 </div>
-<div id="body">
-	<div id="content">
-    <form id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" >
-    <table align="center">
-    <tr>
-    <td align="center"><a href="index.php">Inicio</a></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="nombre" placeholder="Nombre Completo" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="usuario" placeholder="Nombre de Usuario" required /></td>
-    </tr>
-    <tr>
-    <td><input type="password" name="password" placeholder="Password" required /></td>
-    </tr>
-         <tr>
-    <td><input type="password" name="con_password" placeholder="Confirmar password" required /></td>
-    </tr>
-        <tr> <td> <label>Tipo Usuario:</label>
+<body>
+            <div class="classname">
+		<form id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" > 
+			<div><label>Nombre:</label><input id="nombre"name="nombre" type="text" ></div>
+			<br />
+			
+			<div><label>Usuario:</label><input id="usuario" name="usuario" type="text"></div>
+			<br />
+			
+			<div><label>Password:</label><input id="password" name="password" type="password"></div>
+			<br />
+			
+			<div><label>Confirmar Password:</label><input id="con_password" name="con_password" type="password"></div>
+			<br />
+			
+			<div><label>Tipo Usuario:</label>
                             <select id="tipo_usuario" name="tipo_usuario">
 					<?php while($row = $result->fetch_assoc()){ ?>
                                 <option value="<?php echo $row['id']; ?>" selected><?php echo $row['tipo']; ?></option>
 					<?php }?>
 				</select>
-            </td>
-        </tr>
-    <tr>
-    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
-    </tr>
-    </table>
-    </form>
-    </div>
-</div>
-
-</center>
-</body>
+			</div>
+			<br />
+			
+			<div><input name="registar" type="button" value="Registrar" onClick="validar();"></div> 
+		</form>
+            </div>
+		<?php if($bandera) { ?>
+			<h1>Registro exitoso</h1>
+			<a href="welcome.php">Regresar</a>
+			
+			<?php }else{ ?>
+			<br />
+			<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
+			
+		<?php } ?>
+		
+	</body>
 </html>
