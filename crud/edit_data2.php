@@ -23,6 +23,13 @@ if(isset($_POST['btn-update']))
     
     $error = '';
 
+			$sqlPerson = "update personal set personal.nombre='$nombre'";
+			$resultPerson=$mysqli->query($sqlPerson);
+			$idPersona = $mysqli->insert_id;
+			
+			$sqlUsuario = "INSERT INTO usuarios (usuario, password, id_personal, id_tipo) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario')";
+			$resultUsuario = $mysqli->query($sqlUsuario);
+			
 	
 	// variables for input data
 	
