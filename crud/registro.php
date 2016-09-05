@@ -148,11 +148,11 @@
         
         <form action="#">
             <p>
-                <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" />
+                <input class="with-gap" name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" />
                 <label for="idtipo_usuario">Usuario</label>
             </p>
             <p>
-                <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="1" checked/>
+                <input class="with-gap" name="tipo_usuario" id="idtipo_usuario" type="radio" value="1" checked/>
                 <label for="idtipo_usuario">Administrador</label>
             </p>
 
