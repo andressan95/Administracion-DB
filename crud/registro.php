@@ -155,14 +155,7 @@
       <input name="group1" type="radio" id="test2" />
       <label for="test2">Yellow</label>
     </p>
-    <p>
-      <input class="with-gap" name="group1" type="radio" id="test3"  />
-      <label for="test3">Green</label>
-    </p>
-      <p>
-        <input name="group1" type="radio" id="test4" disabled="disabled" />
-        <label for="test4">Brown</label>
-    </p>
+    
   </form>
      
         <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
