@@ -119,7 +119,7 @@ if (isset($_POST['btn-update'])) {
 			{
 				if(validarNombre() && validarUsuario() && validarPassword() && validarTipoUsuario())
 				{
-					document.registro.submit();
+					document.btn-update.submit();
 				}
 			}
 			
