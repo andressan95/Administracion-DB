@@ -77,7 +77,7 @@ function delete_id(id)
 <center>
 
     
-            <table align="center"  class="highlight" >
+            <table align="center"  class="responsive-table highlight" >
 
                 <thead>
                     <tr>
