@@ -20,7 +20,7 @@ if (isset($_GET['edit_id'])) {
     $result_set = mysql_query($sql_query);
     $fetched_row = mysql_fetch_array($result_set);
 }
-if (isset($_POST['update'])) {
+if (isset($_POST['btnupdate'])) {
     // variables for input data
     $nombre = mysqli_real_escape_string($mysqli, $_POST['nombre']);
     $usuario = mysqli_real_escape_string($mysqli, $_POST['usuario']);
@@ -140,7 +140,7 @@ if (isset($_POST['update'])) {
                 </div>
             </div>
             <div class="row">
-                <form class="col s12" method="post">
+                <form class="col s12" method="post" id="update" name="update>
                     <div class="row">
                         <div class="input-field col s6">
                             <input id="nombre" name="nombre" type="text" class="validate" value="<?php echo $fetched_row['nombre']; ?>" required>
@@ -179,7 +179,7 @@ if (isset($_POST['update'])) {
                     </form>
 
                     
-                    <button class="btn waves-effect waves-light" type="submit" name="update" onClick="validar();" >Actualizar
+                    <button class="btn waves-effect waves-light" type="submit" name="btnupdate" onClick="validar();" >Actualizar
                         <i class="material-icons right"></i>
                     </button>
                     <a class="waves-effect waves-light btn" href="usuarios.php">
