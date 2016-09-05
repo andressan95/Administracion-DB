@@ -70,9 +70,6 @@ if (isset($_POST['btn-update'])) {
     }
     // sql query execution function
 }
-if (isset($_POST['btn-cancel'])) {
-    header("Location: index.php");
-}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -194,8 +191,8 @@ if (isset($_POST['btn-cancel'])) {
                     <button class="btn waves-effect waves-light" type="submit" value="actualizar" id="submit" name="btn-update" onClick="validar();" >Actualizar
                         <i class="material-icons right"></i>
                     </button>
-                    <button class="btn waves-effect waves-light" value="cancelar" name="btn-cancel" >Cancelar
-                        <i class="material-icons right"></i>
+                    <a class="waves-effect waves-light btn" href="usuarios.php">
+                                        <i class="material-icons right" >cloud</i>Cancelar</a></td> 
                     </button>
 
                 </form>
