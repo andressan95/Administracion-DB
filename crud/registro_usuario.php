@@ -84,7 +84,13 @@
 			
 			function validarTipoUsuario()
 			{
-				indice = document.getElementById("tipo_usuario").selected;
+//                            var radioButElegido = false;
+//                            for (var i=0; i<indice.length; i++) {
+//                                  if (indice[i].checked == true) { radioButElegido=true;} }
+//                                    if (radioButElegido == false){msgValidacion = msgValidacion+'<p>(*) No hay elegido tratamiento sr. o sra. </p> ';}
+
+
+				indice = document.getElementById("idtipo_usuario").selected;
 				if( indice == null) {
 					alert('Seleccione tipo de usuario');
 					return false;
