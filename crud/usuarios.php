@@ -102,8 +102,8 @@ function delete_id(id)
         while($row=mysql_fetch_row($result_set))
 		{
 		?>
-            <tr>
-                <td class=" card-panel light-blue lighten-5 blue-text text-blue-grey darken-3 "><?php echo $row[1]; ?></td>
+                <tr class="card-panel light-blue lighten-5">
+                <td><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
             <td><?php echo $row[4]; ?></td>
