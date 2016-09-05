@@ -147,17 +147,17 @@
       </div>
         
         <form action="#">
-    <p>
-        <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked/>
-      <label for="idtipo_usuario">Usuario</label>
-    </p>
             <p>
-        <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="1" checked/>
-      <label for="idtipo_usuario">Administrador</label>
-    </p>
-    
-  </form>
-       
+                <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" />
+                <label for="idtipo_usuario">Usuario</label>
+            </p>
+            <p>
+                <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="1" checked/>
+                <label for="idtipo_usuario">Administrador</label>
+            </p>
+
+        </form>
+
      
         <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
         <i class="material-icons right"></i>
