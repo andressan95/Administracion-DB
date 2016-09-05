@@ -1,7 +1,6 @@
 <?php
 
 	
-	require('../conexion.php');
 	 include_once ('dbconfig.php');
 
 	if(isset($_GET['edit_id']))
