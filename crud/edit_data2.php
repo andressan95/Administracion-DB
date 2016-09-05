@@ -20,12 +20,21 @@ if(isset($_POST['btn-update']))
     $tipo_usuario = $_POST['tipo_usuario'];
     $sha1_pass = sha1($password);
     
+    $error = '';
+
 	
 	// variables for input data
 	
 	// sql query for update data into database
-     $sql_query = "update usuarios inner join personal on usuarios.id_personal = personal.id set usuarios.usuario = '$usuario', usuarios.password = '$password', personal.nombre = '$nombre', usuario.id_tipo = '$tipo_usuario' where usuarios.id=".$_GET['edit_id'];
-	// sql query for update data into database
+      $sql_query = "update usuarios
+                        inner join personal 
+                        on usuarios.id_personal = personal.id                       
+                        set  
+                         usuarios.usuario = '$usuario',
+                         usuarios.password = '$password',
+                         personal.nombre = '$nombre',
+                         usuario.id_tipo = '$tipo_usuario'
+                      where usuarios.id=".$_GET['edit_id'];// sql query for update data into database
 	
 	// sql query execution function
 	if(mysql_query($sql_query))
@@ -33,7 +42,7 @@ if(isset($_POST['btn-update']))
 		?>
 		<script type="text/javascript">
 		alert('Data Are Updated Successfully');
-		window.location.href='index.php';
+		window.location.href='edit_data.php';
 		</script>
 		<?php
 	}
