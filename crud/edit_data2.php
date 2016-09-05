@@ -30,10 +30,10 @@ if(isset($_POST['btn-update']))
                         inner join personal 
                         on usuarios.id_personal = personal.id                       
                         set  
-                         usuarios.usuario = '$usuario',
-                         usuarios.password = '$password',
-                         personal.nombre = '$nombre',
-                         usuario.id_tipo = '$tipo_usuario'
+                         usuarios.usuario = 'editado',
+                         usuarios.password = 'asd',
+                         personal.nombre = 'asd',
+                         usuario.id_tipo = '1'
                       where usuarios.id=".$_GET['edit_id'];// sql query for update data into database
 	
 	// sql query execution function
@@ -41,8 +41,8 @@ if(isset($_POST['btn-update']))
 	{
 		?>
 		<script type="text/javascript">
-		alert('Data Are Updated Successfully');
-		window.location.href='edit_data.php';
+		alert('Datos actualizados Correctamente');
+		window.location.href='edit_data2.php';
 		</script>
 		<?php
 	}
@@ -50,7 +50,7 @@ if(isset($_POST['btn-update']))
 	{
 		?>
 		<script type="text/javascript">
-		alert('error occured while updating data');
+		alert('Error al registrar');
 		</script>
 		<?php
 	}
