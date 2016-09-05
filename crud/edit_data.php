@@ -17,7 +17,7 @@ if (isset($_GET['edit_id'])) {
                     inner JOIN personal
                     ON usuarios.id_personal=personal.id
                     inner join tipo_usuario
-                    on usuarios.id_tipo = tipo_usuario.id where usuarios.id =" . $_GET['edit_id'];
+                    on usuarios.id_tipo = tipo_usuario.id where usuarios.id =". $_GET['edit_id'];
     $result_set = mysql_query($sql_query);
     $fetched_row = mysql_fetch_array($result_set);
 }
@@ -42,16 +42,9 @@ if (isset($_POST['btn-update'])) {
                          usuarios.usuario = '$usuario',
                          usuarios.password = '$password',
                          personal.nombre = '$nombre',
-                         tipo_usuario.tipo = '$tipo_usuario'
-                      where usuarios.id=" . $_GET['edit_id'];
+                         tipo_usuario.id = '$tipo_usuario'
+                      where usuarios.id=".$_GET['edit_id'];
         // sql query for update data into database
-
-
-        if ($resultUsuario > 0)
-            $bandera = true;
-        else
-            $error = "Error al Registrar";
-    
 
     // sql query execution function
     if (mysql_query($sql_query)) {
@@ -149,7 +142,7 @@ if (isset($_POST['btn-update'])) {
                 </div>
             </div>
             <div class="row">
-                <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+                <form class="col s12" method="POST">
                     <div class="row">
                         <div class="input-field col s6">
                             <input id="nombre" name="nombre" type="text" class="validate" value="<?php echo $fetched_row['nombre']; ?>" required>
@@ -192,7 +185,7 @@ if (isset($_POST['btn-update'])) {
                         <i class="material-icons right"></i>
                     </button>
                     <a class="waves-effect waves-light btn" href="usuarios.php">
-                                        <i class="material-icons right" >cloud</i>Cancelar</a></td> 
+                                        <i class="material-icons right"></i>Cancelar</a></td> 
                     </button>
 
                 </form>
