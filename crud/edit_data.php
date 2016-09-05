@@ -16,7 +16,7 @@ if (isset($_GET['edit_id'])) {
                     inner JOIN personal
                     ON usuarios.id_personal=personal.id
                     inner join tipo_usuario
-                    on usuarios.id_tipo = tipo_usuario.id where usuarios.id =". $_GET['edit_id'];
+                    on usuarios.id_tipo = tipo_usuario.id where usuarios.id =".$_GET['edit_id'];
     $result_set = mysql_query($sql_query);
     $fetched_row = mysql_fetch_array($result_set);
 }
@@ -40,7 +40,7 @@ if (isset($_POST['btn-update'])) {
                          usuarios.usuario = '$usuario',
                          usuarios.password = '$password',
                          personal.nombre = '$nombre',
-                         usuario.id_tipo = $tipo_usuario
+                         usuario.id_tipo = '$tipo_usuario'
                       where usuarios.id=".$_GET['edit_id'];
         // sql query for update data into database
 
@@ -119,7 +119,7 @@ if (isset($_POST['btn-update'])) {
 			{
 				if(validarNombre() && validarUsuario() && validarPassword() && validarTipoUsuario())
 				{
-					document.btn-update.submit();
+					document.registro.submit();
 				}
 			}
 			
@@ -179,7 +179,7 @@ if (isset($_POST['btn-update'])) {
                     </form>
 
                     
-                    <button class="btn waves-effect waves-light" type="submit" value="actualizar" id="submit" name="btn-update"  >Actualizar
+                    <button class="btn waves-effect waves-light" type="submit" value="actualizar" id="submit" name="btn-update" onClick="validar();" >Actualizar
                         <i class="material-icons right"></i>
                     </button>
                     <a class="waves-effect waves-light btn" href="usuarios.php">
