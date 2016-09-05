@@ -140,7 +140,7 @@ if (isset($_POST['btnupdate'])) {
                 </div>
             </div>
             <div class="row">
-                <form class="col s12" method="post" id="update" name="update>
+                <form class="col s12" method="post" id="update" name="update" >
                     <div class="row">
                         <div class="input-field col s6">
                             <input id="nombre" name="nombre" type="text" class="validate" value="<?php echo $fetched_row['nombre']; ?>" required>
