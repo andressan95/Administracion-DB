@@ -32,10 +32,6 @@
 		
 		
 			
-			$sqlPerson = "INSERT INTO personal (nombre) VALUES('$nombre')";
-			$resultPerson=$mysqli->query($sqlPerson);
-			$idPersona = $mysqli->insert_id;
-			
 			$sqlUsuario = "update usuarios
                         inner join personal 
                         on usuarios.id_personal = personal.id                       
