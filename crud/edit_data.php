@@ -31,13 +31,6 @@ if (isset($_POST['btn-update'])) {
 
     $error = '';
 
-    $sqlUser = "SELECT id FROM usuarios WHERE usuario = '$usuario'";
-    $resultUser = $mysqli->query($sqlUser);
-    $rows = $resultUser->num_rows;
-
-    if ($rows > 0) {
-        $error = "El usuario ya existe";
-    } else {
         // variables for input data
         // sql query for update data into database
         $sql_query = "update usuarios
@@ -58,7 +51,7 @@ if (isset($_POST['btn-update'])) {
             $bandera = true;
         else
             $error = "Error al Registrar";
-    }
+    
 
     // sql query execution function
     if (mysql_query($sql_query)) {
