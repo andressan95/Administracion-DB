@@ -19,22 +19,43 @@
 <html>
 	<head>
 		<title>Administrador</title>
-                <link rel="stylesheet" href="style.css" type="text/css" />
-
+          <link rel="stylesheet" href="style.css" type="text/css" />
+                        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+        <script>         
+         $( document ).ready(function(){
+              $(".button-collapse").sideNav();
+         }) 
+        </script>
+        
 	</head>
-	
+	 <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align"><?php echo 'Bienvenid@' . utf8_decode($row['nombre']); ?> </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="usuario.php">Panel Usuarios</a></li>
+                <li><a href="registro_escritura.php">Registrar Escritura</a></li>
+                <li><a href="perfil.php">Perfil</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="usuario.php">Panel Usuarios</a></li>
+                <li><a href="registro_escritura.php">Registrar Escritura</a></li>
+                <li><a href="perfil.php">Perfil</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </nav>
 	<body>
 		
             
 	<?php if($_SESSION['tipo_usuario']==2){?>
             
             <center>
-                <div id="header">
-                    <div id="content">
-                        <label><?php echo 'Bienvenid@ ' . utf8_decode($row['nombre']); ?></label>
-                        <label><a href="logout.php">Cerrar Sesi&oacute;n</a> </label>
-                    </div>
-                </div>
+               
                 
                 <div id="body">
                     <div id="content">

@@ -39,6 +39,26 @@
 			$error = "Error al Registrar";
 			
 		}
+                
+                if(mysql_query($sql_query))
+	{
+		?>
+		<script type="text/javascript">
+		alert('Usuario Registrado Correctamente');
+            window.location.href = 'index.php';
+		</script>
+		<?php
+	}
+	else
+	{
+		?>
+		<script type="text/javascript">
+		alert('Error al Registrar');
+            window.location.href = 'registro_usuario.php';
+
+		</script>
+		<?php
+	}
 	}
 	
 ?>
@@ -47,7 +67,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Coding Cage</title>
+<title>Registrar Usuario</title>
 <script>
 			function validarNombre()
 			{
@@ -107,17 +127,36 @@
 			
 		</script>
 
-
- <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+                        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+        <script> 
+        
+         $( document ).ready(function(){
+              $(".button-collapse").sideNav();
+         }) 
+        </script>
 </head>
-
-<div id="header">
-	<div id="content">
-    <label>REGISTRAR USUARIO</label>
-    </div>
-</div>
+    <nav>
+ <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align">Registro </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="usuario.php">Panel Usuarios</a></li>
+                <li><a href="registro_escritura.php">Registrar Escritura</a></li>
+                <li><a href="perfil.php">Perfil</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="usuario.php">Panel Usuarios</a></li>
+                <li><a href="registro_escritura.php">Registrar Escritura</a></li>
+                <li><a href="perfil.php">Perfil</a></li>
+                <li><a href="logout.php">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </nav>
 <body>
     <div class="row">
     <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">

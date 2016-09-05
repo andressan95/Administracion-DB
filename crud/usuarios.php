@@ -40,14 +40,14 @@ if(isset($_GET['delete_id']))
 <script type="text/javascript">
 function edt_id(id)
 {
-	if(confirm('Sure to edit ?'))
+	if(confirm('Desea editar ?'))
 	{
 		window.location.href='edit_data2.php?edit_id='+id;
 	}
 }
 function delete_id(id)
 {
-	if(confirm('Sure to Delete ?'))
+	if(confirm('Desea eliminar?'))
 	{
 		window.location.href='usuarios.php?delete_id='+id;
 	}

@@ -47,8 +47,7 @@
                 
                 <nav>
                         <div class="nav-wrapper">
-                            <a href="#!" class="brand-logo left-align">Bienvenid@ <label><?php echo 'Bienvenid@ ' . utf8_decode($row['nombre']); ?></label>
-                            </a>
+                            <a href="#!" class="brand-logo left-align"><?php echo 'Bienvenid@' . utf8_decode($row['nombre']); ?></a>
                             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                             <ul class="right hide-on-med-and-down">
                                 <li><a href="administrador.php">Panel Administrador</a></li>
