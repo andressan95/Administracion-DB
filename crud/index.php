@@ -42,7 +42,11 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-
+        <script> 
+         $( document ).ready(function(){
+              $(".button-collapse").sideNav();
+         }) 
+        </script>
 	</head>
 	
 	<body>
