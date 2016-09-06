@@ -165,7 +165,7 @@
     </nav>
 <body>
     <div class="row">
-    <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form class="col s6" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
         <label>Datos Personales</label>
         
       <div class="row">
@@ -214,7 +214,7 @@
         <label>Contacto:</label>
           <div class="row">
         <div class="input-field col s6">
-          <input id="idcorreo" name="correo" type="correo" class="validate" length="50">
+          <input id="idcorreo" name="correo" type="mail" class="validate" length="50">
           <label for="idcorreo">Correo</label>
         </div>
           
