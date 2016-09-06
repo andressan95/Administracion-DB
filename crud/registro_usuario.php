@@ -36,7 +36,7 @@
 			$error = "El usuario ya existe";
 			} else {
 			
-			$sqlPerson = "INSERT INTO personal (nombre) VALUES('$nombre','$apellido','$cedula','$provincia','$ciudad','$sector','$direccion','$correo','$telefono')";
+			$sqlPerson = "INSERT INTO personal (nombre,apellido,cedula,provincia,ciudad,sector,direccion, correo,telefono) VALUES('$nombre','$apellido','$cedula','$provincia','$ciudad','$sector','$direccion','$correo','$telefono')";
 			$resultPerson=$mysqli->query($sqlPerson);
 			$idPersona = $mysqli->insert_id;
 			
@@ -63,8 +63,7 @@
 	{
 		?>
 		<script type="text/javascript">
-		alert('Error al Registrar');
-            window.location.href = 'registro_usuario.php';
+		alert('Error al Registrar Verifique los Datos');
 
 		</script>
 		<?php
@@ -214,7 +213,7 @@
         <label>Contacto:</label>
           <div class="row">
         <div class="input-field col s6">
-          <input id="idcorreo" name="correo" type="mail" class="validate" length="50">
+          <input id="idcorreo" name="correo" type="email" class="validate" length="50">
           <label for="idcorreo">Correo</label>
         </div>
           
