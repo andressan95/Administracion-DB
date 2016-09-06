@@ -38,9 +38,9 @@
 			else
 			$error = "Error al Registrar";
 			
-		}
+                        }
                 
-                if(mysql_query($sql_query))
+                if(mysql_query($sqlPerson && $sqlUsuario))
 	{
 		?>
 		<script type="text/javascript">
