@@ -39,7 +39,7 @@ if(isset($_POST['btn-update']))
                         $sql_query = "update usuarios inner join personal on usuarios.id_personal = personal.id                       
                         set  
                          usuarios.usuario = '$usuario',
-                         usuarios.password = '$password',
+                         usuarios.password = '$sha1_pass',
                          personal.nombre = '$nombre',
                          usuarios.id_tipo = $tipo_usuario
                       where usuarios.id=".$_GET['edit_id'];

@@ -56,10 +56,10 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                
-                <li><a href="registro_usuario.php.php">Registrarse</a></li>
+                <li><a href="registro_usuario.php">Registrarse</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-             <li><a href="registro_usuario.php.php">Registrarse</a></li>
+             <li><a href="registro_usuario.php">Registrarse</a></li>
 
             </ul>
         </div>

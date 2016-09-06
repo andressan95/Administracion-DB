@@ -13,6 +13,16 @@
 		$nombre = mysqli_real_escape_string($mysqli,$_POST['nombre']);
 		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
 		$password = mysqli_real_escape_string($mysqli,$_POST['password']);
+                
+ $apellido = mysqli_real_escape_string($mysqli,$_POST['apellido']);
+ $cedula= mysqli_real_escape_string($mysqli,$_POST['cedula']);
+ $provincia = mysqli_real_escape_string($mysqli,$_POST['provincia']);
+ $ciudad = mysqli_real_escape_string($mysqli,$_POST['ciudad']);
+ $sector = mysqli_real_escape_string($mysqli,$_POST['sector']);
+ $direccion = mysqli_real_escape_string($mysqli,$_POST['direccion']);
+ $correo= mysqli_real_escape_string($mysqli,$_POST['correo']);
+ $telefono= mysqli_real_escape_string($mysqli,$_POST['telefono']);
+
 		$tipo_usuario = $_POST['tipo_usuario'];
 		$sha1_pass = sha1($password);
 		
@@ -26,7 +36,7 @@
 			$error = "El usuario ya existe";
 			} else {
 			
-			$sqlPerson = "INSERT INTO personal (nombre) VALUES('$nombre')";
+			$sqlPerson = "INSERT INTO personal (nombre) VALUES('$nombre','$apellido','$cedula','$provincia','$ciudad','$sector','$direccion','$correo','$telefono')";
 			$resultPerson=$mysqli->query($sqlPerson);
 			$idPersona = $mysqli->insert_id;
 			
@@ -36,7 +46,7 @@
 			if($resultUsuario>0)
 			$bandera = true;
 			else
-			$error = "Error al Registrar";
+			$error = "Error al Registrar usuario";
 			
                         }
                 
@@ -144,43 +154,94 @@
             <a href="#!" class="brand-logo left-align">Registro </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="usuario.php">Panel Usuarios</a></li>
-                <li><a href="registro_escritura.php">Registrar Escritura</a></li>
-                <li><a href="perfil.php">Perfil</a></li>
-                <li><a href="logout.php">Cerrar Sesion</a></li>
+                               <li><a href="index.php">Inicio</a></li>
+
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="usuario.php">Panel Usuarios</a></li>
-                <li><a href="registro_escritura.php">Registrar Escritura</a></li>
-                <li><a href="perfil.php">Perfil</a></li>
-                <li><a href="logout.php">Cerrar Sesion</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                
             </ul>
         </div>
     </nav>
 <body>
     <div class="row">
     <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+        <label>Datos Personales</label>
+        
       <div class="row">
         <div class="input-field col s6">
-          <input id="nombre" name="nombre" type="text" class="validate">
-          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" class="validate" length="50">
+          <label for="nombre">Nombres</label>
         </div>
+          
+          <div class="input-field col s6">
+              <input id="idapellido" name="apellido" type="text" class="validate" length="50">
+          <label for="idapellido">Apellidos</label>
+        </div>
+      </div>
+       
+        <div class="row">
+        <div class="input-field col s6">
+            <input id="idcedula" name="cedula" type="number" class="validate" length="10">
+          <label for="idcedula">Cedula de Identidad</label>
+        </div>  
+      </div>
+        
+        <label>Direccion:</label>
+        
+        <div class="row">
+        <div class="input-field col s6">
+          <input id="idprovincia" name="provincia" type="text" class="validate" length="50">
+          <label for="idprovincia">Provincia</label>
+        </div>
+          
+          <div class="input-field col s6">
+              <input id="idciudad" name="ciudad" type="text" class="validate" length="50">
+          <label for="idciudad">Ciudad</label>
+        </div>
+      </div>
+          <div class="row">
+        <div class="input-field col s6">
+          <input id="idsector" name="sector" type="text" class="validate" length="50">
+          <label for="idsector">Sector</label>
+        </div>
+          
+          <div class="input-field col s6">
+              <input id="iddireccion" name="direccion" type="text" class="validate" length="50">
+          <label for="iddireccion">Direccion</label>
+        </div>
+      </div>
+        <label>Contacto:</label>
+          <div class="row">
+        <div class="input-field col s6">
+          <input id="idcorreo" name="correo" type="correo" class="validate" length="50">
+          <label for="idcorreo">Correo</label>
+        </div>
+          
+          <div class="input-field col s6">
+              <input id="idtelefono" name="telefono" type="number" class="validate" length="10">
+          <label for="idtelefono">Telefono</label>
+        </div>
+      </div>
+        
+        <label>Inicio de Sesion</label>
       </div>
         <div class="row">
         <div class="input-field col s6">
-          <input id="usuario" name="usuario" type="text" class="validate">
-          <label for="usuario">Usuario</label>
+          <input id="usuario" name="usuario" type="text" class="validate" length="50">
+          <label for="usuario">Nombre de Usuario</label>
         </div>
+            
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate">
+          <input id="password" type="password" name="password" class="validate" length="50">
           <label for="password">Password</label>
         </div>
       </div>
          <div class="row">
         <div class="input-field col s6">
-          <input id="con_password" type="password" name="con_password" class="validate">
+          <input id="con_password" type="password" name="con_password" class="validate" length="50">
           <label for="con_password">Confirmar Password</label>
         </div>
       </div>
