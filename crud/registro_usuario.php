@@ -10,16 +10,16 @@
 	
 	if(!empty($_POST))
 	{
-		$nombre = mysqli_real_escape_string($mysqli,$_POST['nombre']);
 		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
 		$password = mysqli_real_escape_string($mysqli,$_POST['password']);
-                
+                		
+ $nombre = mysqli_real_escape_string($mysqli,$_POST['nombre']);
  $apellido = mysqli_real_escape_string($mysqli,$_POST['apellido']);
  $cedula= mysqli_real_escape_string($mysqli,$_POST['cedula']);
- $provincia = mysqli_real_escape_string($mysqli,$_POST['provincia']);
- $ciudad = mysqli_real_escape_string($mysqli,$_POST['ciudad']);
- $sector = mysqli_real_escape_string($mysqli,$_POST['sector']);
+  $ciudad = mysqli_real_escape_string($mysqli,$_POST['ciudad']);
  $direccion = mysqli_real_escape_string($mysqli,$_POST['direccion']);
+ $provincia = mysqli_real_escape_string($mysqli,$_POST['provincia']);
+ $sector = mysqli_real_escape_string($mysqli,$_POST['sector']);
  $correo= mysqli_real_escape_string($mysqli,$_POST['correo']);
  $telefono= mysqli_real_escape_string($mysqli,$_POST['telefono']);
 
@@ -29,18 +29,24 @@
 		$error = '';
 		
 		$sqlUser = "SELECT id FROM usuarios WHERE usuario = '$usuario'";
+                $sqlUser = "SELECT id FROM personal WHERE cedula = '$cedula'";
+
 		$resultUser=$mysqli->query($sqlUser);
 		$rows = $resultUser->num_rows;
-		
+                
+                $resultPerson = $mysqli->query($sqlUser);
+		$rows2 = $resultPerson -> num_rows;
 		if($rows > 0) {
 			$error = "El usuario ya existe";
-			} else {
+			}if($rows2 > 0){
+                            $error = "La cedula ya existe";
+                        }else {
 
-			$sqlPerson = "INSERT INTO personal (nombre, apellido, cedula, ciudad, direccion, provincia, sector, correo, telefono) VALUES('$nombre','$apellido','$cedula','$ciudad','$direccion','$provincia','$sector','$correo','$telefono')";
+			$sqlPerson = "INSERT INTO personal (nombre, apellido, cedula, ciudad, direccion, provincia, sector, correo, telefono) VALUES ('$nombre','$apellido','$cedula','$ciudad','$direccion','$provincia','$sector','$correo','$telefono');";
 			$resultPerson=$mysqli->query($sqlPerson);
 			$idPersona = $mysqli->insert_id;
 			
-			$sqlUsuario = "INSERT INTO usuarios (usuario, password, id_personal, id_tipo) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario')";
+			$sqlUsuario = "INSERT INTO usuarios (usuario, password, id_personal, id_tipo) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario');";
 			$resultUsuario = $mysqli->query($sqlUsuario);
 			
 			if($resultUsuario>0)
@@ -50,7 +56,7 @@
 			
                         }
                 
-                if(mysql_query($sqlPerson))
+                if(mysql_query($sqlPerson ) && mysql_query($sqlUsuario ) )
 	{
 		?>
 		<script type="text/javascript">
@@ -64,7 +70,6 @@
 		?>
 		<script type="text/javascript">
 		alert('Error al Registrar Verifique los Datos');
-
 		</script>
 		<?php
 	}
