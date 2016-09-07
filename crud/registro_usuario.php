@@ -263,7 +263,7 @@
 		
         		<script type="text/javascript">
                               swal({  
-                                            title: "Ingrese un Nombre", 
+                                            title: "Registro Completado Con Exito", 
                                             text: "Alerta se cerrara en 4 segundos.. Redireccionando", 
                                             type:"success",
                                             timer: 4000, 
@@ -272,6 +272,7 @@
                                          });
                                          function () {
                                         window.location.href= 'index.php';
+                                                 };
                 		</script>
 			<?php }else{ ?>
 			<br />
