@@ -6,7 +6,7 @@
 	
 	$result=$mysqli->query($sql);
 	
-	$bandera = false;
+	$bandera = true;
 	
 	if(!empty($_POST))
 	{
@@ -75,6 +75,7 @@
                                             title: "Ingrese un Nombre", 
                                             text: "Alerta se cerrara en 4 segundos..",  
                                             timer: 4000, 
+                                            type:"error",
                                             showConfirmButton: true });
                                         return false;
 				} else { return true;}
@@ -84,7 +85,12 @@
 			{
 				valor = document.getElementById("usuario").value;
 				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-					alert('Falta Llenar Usuario');
+					 swal({  
+                                            title: "Ingrese Nombre de Usuario", 
+                                            text: "Alerta se cerrara en 4 segundos..",  
+                                            timer: 4000, 
+                                            type:"error",
+                                            showConfirmButton: true });
 					return false;
 				} else { return true;}
 			}
@@ -93,13 +99,24 @@
 			{
 				valor = document.getElementById("password").value;
 				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-					alert('Falta Llenar Password');
+					 swal({  
+                                            title: "Ingrese la Contraseña", 
+                                            text: "Alerta se cerrara en 4 segundos..",  
+                                            timer: 4000, 
+                                            type:"error",
+                                            showConfirmButton: true });
 					return false;
 					} else { 
 					valor2 = document.getElementById("con_password").value;
 					
 					if(valor == valor2) { return true; }
-					else { alert('Las contraseña no coinciden'); return false;}
+					else {  swal({  
+                                            title: "Las contraseñas no Coinsiden", 
+                                            text: "Alerta se cerrara en 4 segundos..",  
+                                            timer: 4000, 
+                                            type:"error",
+                                            showConfirmButton: true });
+                                            return false;}
 				}
 			}
 			
