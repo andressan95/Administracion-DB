@@ -278,7 +278,7 @@
 			<br />
                         
                         <script type="text/javascript">  
-        		sweetAlert("Usuario no registrado", "<?php echo isset($error) ? utf8_decode($error) : '' ; ?>", "error");
+        		swal("Usuario no registrado", "<?php echo isset($error) ? utf8_decode($error) : '' ; ?>", "error");
 		</script>
                         
 			
