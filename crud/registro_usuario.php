@@ -6,7 +6,7 @@
 	
 	$result=$mysqli->query($sql);
 	
-	$bandera = true;
+	  $bandera;
 	
 	if(!empty($_POST))
 	{
@@ -275,8 +275,8 @@
         
   </div>
           
-		<?php if($bandera) {   
-                    
+		<?php if($bandera = true) {   
+                  
                     ?>
  
                          <script type="text/javascript">
