@@ -55,21 +55,25 @@
 			$error = "Error al Registrar usuario";
 			
                         }
-                
-                if(mysql_query($sqlPerson ) && mysql_query($sqlUsuario ) )
-	{
-		?>
-		<script type="text/javascript">
-		alert('Usuario Registrado Correctamente');
-            window.location.href = 'index.php';
-		</script>
-		<?php
-	}
-	else
-	{
-		?>
-		<script type="text/javascript">
-		alert('Error al Registrar Verifique los Datos');
+
+    if (mysql_query($sqlPerson)) {
+        ?>
+        		<script type="text/javascript">
+        		alert('Usuario Registrado Correctamente');
+                    window.location.href = 'index.php';
+        		</script>
+        <?php
+    } if (mysql_query($sqlUsuario)) {
+        ?>
+        		<script type="text/javascript">
+        		swal("Usuario Registrado Correctamente", "", "success")
+                    window.location.href = 'index.php';
+        		</script>
+        <?php
+    }else {
+        ?>
+        	<script type="text/javascript">
+        		sweetAlert("Usuario no registrado", "Por favor Verifique los datos", "error");
 		</script>
 		<?php
 	}
@@ -87,8 +91,12 @@
 			{
 				valor = document.getElementById("nombre").value;
 				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-					alert('Falta Llenar Nombre');
-					return false;
+                                        swal({  
+                                            title: "Ingrese un Nombre", 
+                                            text: "Alerta se cerrara en 4 segundos..",  
+                                            timer: 4000, 
+                                            showConfirmButton: true });
+                                        return false;
 				} else { return true;}
 			}
 			
@@ -146,6 +154,8 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+        <script src="sweetalert/sweetalert.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="sweetalert/sweetalert.css"></link>
         <script> 
         
          $( document ).ready(function(){
