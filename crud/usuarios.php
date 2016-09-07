@@ -84,18 +84,29 @@ function delete_id(id)
 
                         <th class="card-panel cyan accent-3 blue-text text-lighten-5" data-field="usuario">Usuario</th>
                         <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="password">Password</th>
-                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="nombre">Nombre</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="nombre">Nombres</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="apellido">Apellidos</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="cedula">Cedula</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="ciudad">Ciudad</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="direccion">Direccion</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="provincia">Provincia</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="sector">Sector</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="correo">Correo</th>
+                        <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="telefono">Telefono</th>
                         <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="tipo_usuario"> Tipo de Usuario</th>
                         <th class="card-panel cyan accent-3 blue-text text-lighten-5"data-field="operaciones" colspan="2">Operaciones</th>
+
                     </tr>
                 </thead>  
   <?php
-	$sql_query="SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, tipo_usuario.tipo
-                    FROM usuarios
-                    inner JOIN personal
-                    ON usuarios.id_personal=personal.id
-                    inner join tipo_usuario
-                    on usuarios.id_tipo = tipo_usuario.id;";
+	$sql_query="SELECT usuarios.id, usuarios.usuario, usuarios.password, personal.nombre, personal.apellido, personal.cedula,
+                        personal.ciudad, personal.direccion, personal.provincia, personal.sector,
+                        personal.correo, personal.telefono, tipo_usuario.tipo
+                        FROM usuarios
+                        inner JOIN personal
+                        ON usuarios.id_personal=personal.id
+                        inner join tipo_usuario
+                        on usuarios.id_tipo = tipo_usuario.id ;";
 	$result_set=mysql_query($sql_query);
 	if(mysql_num_rows($result_set)>0)
 	{
@@ -107,6 +118,14 @@ function delete_id(id)
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
             <td><?php echo $row[4]; ?></td>
+            <td><?php echo $row[5]; ?></td>
+            <td><?php echo $row[6]; ?></td>
+            <td><?php echo $row[7]; ?></td>
+            <td><?php echo $row[8]; ?></td>
+            <td><?php echo $row[9]; ?></td>
+            <td><?php echo $row[10]; ?></td>
+            <td><?php echo $row[11]; ?></td>
+            <td><?php echo $row[12]; ?></td>
 
             <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
             <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
