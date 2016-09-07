@@ -30,7 +30,7 @@
 		
 		$sqlUser = "SELECT id FROM usuarios WHERE usuario = '$usuario'";
                 $sqlUser = "SELECT id FROM personal WHERE cedula = '$cedula'";
-
+                
 		$resultUser=$mysqli->query($sqlUser);
 		$rows = $resultUser->num_rows;
                 
@@ -56,26 +56,7 @@
 			
                         }
 
-    if (mysql_query($sqlPerson)) {
-        ?>
-<script src="sweetalert/sweetalert.min.js"></script> 
-        <link rel="stylesheet" type="text/css" href="sweetalert/sweetalert.css"></link>
-        		<script type="text/javascript">
-        		alert('Usuario Registrado Correctamente');
-                    window.location.href = 'index.php';
-        		</script>
-        <?php
-    } if (mysql_query($sqlUsuario)) {
-        ?>
-
-        <?php
-    }else {
-        ?> 
-<script src="sweetalert/sweetalert.min.js"></script> 
-        <link rel="stylesheet" type="text/css" href="sweetalert/sweetalert.css"></link>
-        	
-		<?php
-	}
+ 
 	}
 	
 ?>
@@ -281,10 +262,17 @@
 			
 		
         		<script type="text/javascript">
-                             
-        		swal("Usuario Registrado Correctamente", "", "success")
-                            window.location.href = 'index.php';
-        		</script>
+                              swal({  
+                                            title: "Ingrese un Nombre", 
+                                            text: "Alerta se cerrara en 4 segundos.. Redireccionando", 
+                                            type:"success",
+                                            timer: 4000, 
+                                            showConfirmButton: true, 
+                                           
+                                         });
+                                         function () {
+                                        window.location.href= 'index.php';
+                		</script>
 			<?php }else{ ?>
 			<br />
                         
