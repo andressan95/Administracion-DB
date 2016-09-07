@@ -6,29 +6,18 @@
 	
 	$result=$mysqli->query($sql);
 	
+	$bandera;
 	
 	if(!empty($_POST))
 	{
 		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
 		$password = mysqli_real_escape_string($mysqli,$_POST['password']);
-                		
- $nombre = mysqli_real_escape_string($mysqli,$_POST['nombre']);
- $apellido = mysqli_real_escape_string($mysqli,$_POST['apellido']);
- $cedula= mysqli_real_escape_string($mysqli,$_POST['cedula']);
-  $ciudad = mysqli_real_escape_string($mysqli,$_POST['ciudad']);
- $direccion = mysqli_real_escape_string($mysqli,$_POST['direccion']);
- $provincia = mysqli_real_escape_string($mysqli,$_POST['provincia']);
- $sector = mysqli_real_escape_string($mysqli,$_POST['sector']);
- $correo= mysqli_real_escape_string($mysqli,$_POST['correo']);
- $telefono= mysqli_real_escape_string($mysqli,$_POST['telefono']);
-
 		$tipo_usuario = $_POST['tipo_usuario'];
 		$sha1_pass = sha1($password);
 		
 		$error = '';
 		
 		$sqlUser = "SELECT id FROM usuarios WHERE usuario = '$usuario'";
-                $sqlUser = "SELECT id FROM personal WHERE cedula = '$cedula'";
                 
 		$resultUser=$mysqli->query($sqlUser);
 		$rows = $resultUser->num_rows;
@@ -37,15 +26,11 @@
 		$rows2 = $resultPerson -> num_rows;
 		if($rows > 0) {
 			$error = "El usuario ya existe";
-			}if($rows2 > 0){
-                            $error = "La cedula ya existe";
-                        }else {
+			}else {
 
-			$sqlPerson = "INSERT INTO personal (nombre, apellido, cedula, ciudad, direccion, provincia, sector, correo, telefono) VALUES ('$nombre','$apellido','$cedula','$ciudad','$direccion','$provincia','$sector','$correo','$telefono');";
-			$resultPerson=$mysqli->query($sqlPerson);
-			$idPersona = $mysqli->insert_id;
 			
-			$sqlUsuario = "INSERT INTO usuarios (usuario, password, id_personal, id_tipo) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario');";
+		
+			$sqlUsuario = "INSERT INTO usuario (usuario, password, tipo_usuario_id) VALUES('$usuario','$sha1_pass','$tipo_usuario');";
 			$resultUsuario = $mysqli->query($sqlUsuario);
 			
 			if($resultUsuario>0)
@@ -66,20 +51,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Registrar Usuario</title>
 <script>
-			function validarNombre()
-			{
-				valor = document.getElementById("nombre").value;
-				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-                                        swal({  
-                                            title: "Ingrese un Nombre", 
-                                            text: "Alerta se cerrara en 4 segundos..",  
-                                            timer: 4000, 
-                                            type:"error",
-                                            showConfirmButton: true });
-                                        return false;
-				} else { return true;}
-			}
-			
 			function validarUsuario()
 			{
 				valor = document.getElementById("usuario").value;
@@ -110,7 +81,7 @@
 					
 					if(valor == valor2) { return true; }
 					else {  swal({  
-                                            title: "Las contraseñas no Coinsiden", 
+                                            title: "Las contraseñas No Coinsiden", 
                                             text: "Alerta se cerrara en 4 segundos..",  
                                             timer: 4000, 
                                             type:"error",
@@ -137,7 +108,7 @@
 			
 			function validar()
 			{
-				if(validarNombre() && validarUsuario() && validarPassword() && validarTipoUsuario())
+				if( validarUsuario() && validarPassword() && validarTipoUsuario())
 				{
 					document.registro.submit();
 				}
@@ -176,65 +147,8 @@
 <body>
     <div class="row">
     <form class="col s6" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-        <label>Datos Personales</label>
         
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="nombre" name="nombre" type="text" class="validate" length="50">
-          <label for="nombre">Nombres</label>
-        </div>
-          
-          <div class="input-field col s6">
-              <input id="apellido" name="apellido" type="text" class="validate" length="50">
-          <label for="apellido">Apellidos</label>
-        </div>
-      </div>
-       
-        <div class="row">
-        <div class="input-field col s6">
-            <input id="cedula" name="cedula" type="number" class="validate" length="10">
-          <label for="cedula">Cedula de Identidad</label>
-        </div>  
-      </div>
-        
-        <label>Direccion:</label>
-        
-        <div class="row">
-        <div class="input-field col s6">
-          <input id="provincia" name="provincia" type="text" class="validate" length="50">
-          <label for="provincia">Provincia</label>
-        </div>
-          
-          <div class="input-field col s6">
-              <input id="ciudad" name="ciudad" type="text" class="validate" length="50">
-          <label for="ciudad">Ciudad</label>
-        </div>
-      </div>
-          <div class="row">
-        <div class="input-field col s6">
-          <input id="sector" name="sector" type="text" class="validate" length="50">
-          <label for="sector">Sector</label>
-        </div>
-          
-          <div class="input-field col s6">
-              <input id="direccion" name="direccion" type="text" class="validate" length="50">
-          <label for="direccion">Direccion</label>
-        </div>
-      </div>
-        <label>Contacto:</label>
-          <div class="row">
-        <div class="input-field col s6">
-          <input id="correo" name="correo" type="email" class="validate" length="50">
-          <label for="correo">Correo</label>
-        </div>
-          
-          <div class="input-field col s6">
-              <input id="telefono" name="telefono" type="number" class="validate" length="10">
-          <label for="telefono">Telefono</label>
-        </div>
-      </div>
-        
-        <label>Inicio de Sesion</label>
+        <label>Registro para Inicio de Sesion</label>
       </div>
         <div class="row">
         <div class="input-field col s6">
@@ -274,8 +188,10 @@
         
   </div>
           
-		<?php if($bandera = false) {   
+		<?php if($bandera) {   
+                    
                     ?>
+ 
                          <script type="text/javascript">
                               swal({  
                                             title: "Registro Completado Con Exito", 
@@ -293,7 +209,9 @@
 			
         		
 
-			<?php }else{ ?>                        
+			<?php }else{ ?>
+			<br />
+                        
                         <script type="text/javascript">  
         		swal("Usuario no registrado", "<?php echo isset($error) ? utf8_decode($error) : '' ; ?>", "error");
 		</script>
