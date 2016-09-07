@@ -35,8 +35,8 @@
 		if($rows > 0) {
 			$error = "El usuario ya existe";
 			} else {
-			
-			$sqlPerson = "INSERT INTO personal (nombre,apellido,cedula,provincia,ciudad,sector,direccion, correo,telefono) VALUES('$nombre','$apellido','$cedula','$provincia','$ciudad','$sector','$direccion','$correo','$telefono')";
+
+			$sqlPerson = "INSERT INTO personal (nombre, apellido, cedula, ciudad, direccion, provincia, sector, correo, telefono) VALUES('$nombre','$apellido','$cedula','$ciudad','$direccion','$provincia','$sector','$correo','$telefono')";
 			$resultPerson=$mysqli->query($sqlPerson);
 			$idPersona = $mysqli->insert_id;
 			
