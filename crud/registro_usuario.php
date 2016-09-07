@@ -258,7 +258,10 @@
         
   </div>
           
-		<?php if($bandera) { ?>
+		<?php if($bandera) {   
+                    sleep(4);
+                    header('Location: index.php');
+                    ?>
 			
 		
         		<script type="text/javascript">
@@ -268,12 +271,10 @@
                                             type:"success",
                                             timer: 4000, 
                                             showConfirmButton: true, 
-                                           
                                          });
-                                         function () {
-                                        window.location.href= 'index.php';
-                                                 };
+                                        
                 		</script>
+
 			<?php }else{ ?>
 			<br />
                         
