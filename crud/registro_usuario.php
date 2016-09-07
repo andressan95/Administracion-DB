@@ -6,7 +6,6 @@
 	
 	$result=$mysqli->query($sql);
 	
-	  $bandera;
 	
 	if(!empty($_POST))
 	{
