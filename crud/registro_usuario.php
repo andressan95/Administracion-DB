@@ -259,21 +259,25 @@
   </div>
           
 		<?php if($bandera) {   
-                    sleep(4);
-                    header('Location: index.php');
+                    
                     ?>
-			
-		
-        		<script type="text/javascript">
+ 
+                         <script type="text/javascript">
                               swal({  
                                             title: "Registro Completado Con Exito", 
                                             text: "Alerta se cerrara en 4 segundos.. Redireccionando", 
                                             type:"success",
                                             timer: 4000, 
                                             showConfirmButton: true, 
-                                         });
+                                         },
+
+                                        function(){ 
+                                        window.location.href='index.php';
+                                        }); 
                                         
                 		</script>
+			
+        		
 
 			<?php }else{ ?>
 			<br />
