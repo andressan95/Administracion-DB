@@ -58,6 +58,8 @@
 
     if (mysql_query($sqlPerson)) {
         ?>
+<script src="sweetalert/sweetalert.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="sweetalert/sweetalert.css"></link>
         		<script type="text/javascript">
         		alert('Usuario Registrado Correctamente');
                     window.location.href = 'index.php';
@@ -65,16 +67,13 @@
         <?php
     } if (mysql_query($sqlUsuario)) {
         ?>
-        		<script type="text/javascript">
-        		swal("Usuario Registrado Correctamente", "", "success")
-                    window.location.href = 'index.php';
-        		</script>
+
         <?php
     }else {
-        ?>
-        	<script type="text/javascript">
-        		sweetAlert("Usuario no registrado", "Por favor Verifique los datos", "error");
-		</script>
+        ?> 
+<script src="sweetalert/sweetalert.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="sweetalert/sweetalert.css"></link>
+        	
 		<?php
 	}
 	}
@@ -279,12 +278,20 @@
   </div>
           
 		<?php if($bandera) { ?>
-			<h1>Registro exitoso</h1>
-			<a href="welcome.php">Regresar</a>
 			
+		
+        		<script type="text/javascript">
+                             
+        		swal("Usuario Registrado Correctamente", "", "success")
+                            window.location.href = 'index.php';
+        		</script>
 			<?php }else{ ?>
 			<br />
-			<div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?></div>
+                        
+                        <script type="text/javascript">  
+        		sweetAlert("Usuario no registrado", "<?php echo isset($error) ? utf8_decode($error) : '' ; ?>", "error");
+		</script>
+                        
 			
 		<?php } ?>
 		
