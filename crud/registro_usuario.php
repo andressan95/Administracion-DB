@@ -274,10 +274,8 @@
         
   </div>
           
-		<?php if($bandera = true) {   
-                  
+		<?php if($bandera = false) {   
                     ?>
- 
                          <script type="text/javascript">
                               swal({  
                                             title: "Registro Completado Con Exito", 
@@ -295,9 +293,7 @@
 			
         		
 
-			<?php }else{ ?>
-			<br />
-                        
+			<?php }else{ ?>                        
                         <script type="text/javascript">  
         		swal("Usuario no registrado", "<?php echo isset($error) ? utf8_decode($error) : '' ; ?>", "error");
 		</script>
