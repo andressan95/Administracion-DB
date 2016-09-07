@@ -50,7 +50,7 @@
 			
                         }
                 
-                if(mysql_query($sqlPerson && $sqlUsuario))
+                if(mysql_query($sqlPerson))
 	{
 		?>
 		<script type="text/javascript">
@@ -174,15 +174,15 @@
         </div>
           
           <div class="input-field col s6">
-              <input id="idapellido" name="apellido" type="text" class="validate" length="50">
-          <label for="idapellido">Apellidos</label>
+              <input id="apellido" name="apellido" type="text" class="validate" length="50">
+          <label for="apellido">Apellidos</label>
         </div>
       </div>
        
         <div class="row">
         <div class="input-field col s6">
-            <input id="idcedula" name="cedula" type="number" class="validate" length="10">
-          <label for="idcedula">Cedula de Identidad</label>
+            <input id="cedula" name="cedula" type="number" class="validate" length="10">
+          <label for="cedula">Cedula de Identidad</label>
         </div>  
       </div>
         
@@ -190,36 +190,36 @@
         
         <div class="row">
         <div class="input-field col s6">
-          <input id="idprovincia" name="provincia" type="text" class="validate" length="50">
-          <label for="idprovincia">Provincia</label>
+          <input id="provincia" name="provincia" type="text" class="validate" length="50">
+          <label for="provincia">Provincia</label>
         </div>
           
           <div class="input-field col s6">
-              <input id="idciudad" name="ciudad" type="text" class="validate" length="50">
-          <label for="idciudad">Ciudad</label>
+              <input id="ciudad" name="ciudad" type="text" class="validate" length="50">
+          <label for="ciudad">Ciudad</label>
         </div>
       </div>
           <div class="row">
         <div class="input-field col s6">
-          <input id="idsector" name="sector" type="text" class="validate" length="50">
-          <label for="idsector">Sector</label>
+          <input id="sector" name="sector" type="text" class="validate" length="50">
+          <label for="sector">Sector</label>
         </div>
           
           <div class="input-field col s6">
-              <input id="iddireccion" name="direccion" type="text" class="validate" length="50">
-          <label for="iddireccion">Direccion</label>
+              <input id="direccion" name="direccion" type="text" class="validate" length="50">
+          <label for="direccion">Direccion</label>
         </div>
       </div>
         <label>Contacto:</label>
           <div class="row">
         <div class="input-field col s6">
-          <input id="idcorreo" name="correo" type="email" class="validate" length="50">
-          <label for="idcorreo">Correo</label>
+          <input id="correo" name="correo" type="email" class="validate" length="50">
+          <label for="correo">Correo</label>
         </div>
           
           <div class="input-field col s6">
-              <input id="idtelefono" name="telefono" type="number" class="validate" length="10">
-          <label for="idtelefono">Telefono</label>
+              <input id="telefono" name="telefono" type="number" class="validate" length="10">
+          <label for="telefono">Telefono</label>
         </div>
       </div>
         
