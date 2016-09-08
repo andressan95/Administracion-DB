@@ -154,7 +154,7 @@
         <form class="col s6 center-align container" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 
             <label>Registro para Inicio de Sesion</label>
-            <div class="row">
+            <div class="row centered">
                 <div class="row">
                 <div class="input-field col s4">
                     <input id="usuario" name="usuario" type="text" class="validate" length="50">
