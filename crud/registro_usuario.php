@@ -166,7 +166,7 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>Registro de Inicio de Sesion</div>
       <div class="collapsible-body">
-          <div class="row center-align">
+          <div class="centered row">
                 <div class="row">
                 <div class="input-field col s4">
                     <input id="usuario" name="usuario" type="text" class="validate" length="50">
@@ -191,7 +191,7 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">whatshot</i>Datos Personales</div>
       <div class="collapsible-body">
-           <div class="row center-block">
+           <div class="row center">
                 <div class="row">
                 <div class="input-field col s4">
                     <input id="nombre" name="nombre" type="text" class="validate" length="50">
@@ -232,7 +232,7 @@
       <div class="collapsible-header"><i class="material-icons">place</i>Direccion</div>
       <div class="collapsible-body">
           
-            <div class="row">
+            <div class="center-on-small-only row">
                 <div class="input-field col s4">
                     <input id="ciudad" name="ciudad" type="text" class="validate" length="50">
                         <label for="ciudad">Ciudad</label>
