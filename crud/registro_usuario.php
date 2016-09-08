@@ -207,7 +207,6 @@
     </nav>
 <body>
     
-         <p>
     <div class="center-align">
         
         <form class="col s6 center-align container" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -312,9 +311,8 @@
 
 
            
-                <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked hiden/>
-                <label for="idtipo_usuario" hiden>Usuario</label>
-            </p>
+                <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked />
+                <label for="idtipo_usuario" >Usuario</label>
 
 
             <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
