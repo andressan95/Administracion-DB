@@ -155,16 +155,18 @@
 
             <label>Registro para Inicio de Sesion</label>
             <div class="row center-align container">
+                <div class="row">
                 <div class="input-field col s6">
                     <input id="usuario" name="usuario" type="text" class="validate" length="50">
                         <label for="usuario">Nombre de Usuario</label>
-
                 </div>
-                
+                </div>
+                <div class="row">
                     <div class="input-field col s6">
                         <input id="password" type="password" name="password" class="validate" length="50">
                             <label for="password">Password</label>
                     </div>
+                </div>
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="con_password" type="password" name="con_password" class="validate" length="50">
