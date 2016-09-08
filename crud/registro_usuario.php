@@ -32,13 +32,12 @@
 			$error = "El usuario ya existe";
 			}else {
                         
-			$sqlPerson = "INSERT INTO personal ((nombre, apellido, cedula, ciudad, direccion, provincia, sector, correo,"
-                                . " telefono)) VALUES('$nombre','$apellido','$cedula','$ciudad','$direccion','$provincia','$sector','$correo')";
+			$sqlPerson = "INSERT INTO personal (nombre,apellido) VALUES('$nombre','$apellido')";
 			$resultPerson=$mysqli->query($sqlPerson);
 			$idPersona = $mysqli->insert_id;
 			
 		
-			$sqlUsuario = "INSERT INTO usuario (usuario, password, tipo_usuario_id, personal_id) VALUES('$usuario','$sha1_pass','$tipo_usuario','$idPersona');";
+			$sqlUsuario = "INSERT INTO usuarios (usuario, password, personal_id, tipo_usuario_id) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario')";
 			$resultUsuario = $mysqli->query($sqlUsuario);
 			
 			if($resultUsuario>0)
@@ -65,7 +64,12 @@
 			{
 				valor = document.getElementById("nombre").value;
 				if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-					alert('Falta Llenar Nombre');
+					swal({  
+                                            title: "Ingrese Nombres", 
+                                            text: "Alerta se cerrara en 4 segundos..",  
+                                            timer: 4000, 
+                                            type:"error",
+                                            showConfirmButton: true });
 					return false;
 				} else { return true;}
 			}
