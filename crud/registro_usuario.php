@@ -151,11 +151,14 @@
         </div>
     </nav>
 <body>
+    
+        
     <div class="center-align">
         <form class="col s6 center-align container" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-
-            <label>Registro para Inicio de Sesion</label>
-            <div class="row center-align">
+<ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Registro de Inicio de Sesion</div>
+      <div class="collapsible-body"><div class="row center-align">
                 <div class="row">
                 <div class="input-field col s4">
                     <input id="usuario" name="usuario" type="text" class="validate" length="50">
@@ -174,10 +177,22 @@
                             <label for="con_password">Confirmar Password</label>
                     </div>
                 </div>
-
+                </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul>
+          
+            
                 <p>
-                    <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked/>
-                    <label for="idtipo_usuario">Usuario</label>
+                    <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked hiden/>
+                    <label for="idtipo_usuario" hiden>Usuario</label>
                 </p>
 
 
