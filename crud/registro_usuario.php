@@ -6,18 +6,19 @@
 	
 	$result=$mysqli->query($sql);
 	
-	$bandera;
 	
 	if(!empty($_POST))
 	{
 		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
 		$password = mysqli_real_escape_string($mysqli,$_POST['password']);
+            
+
 		$tipo_usuario = $_POST['tipo_usuario'];
 		$sha1_pass = sha1($password);
 		
 		$error = '';
 		
-		$sqlUser = "SELECT id FROM usuarios WHERE usuario = '$usuario'";
+		$sqlUser = "SELECT id FROM usuario WHERE usuario = '$usuario'";
                 
 		$resultUser=$mysqli->query($sqlUser);
 		$rows = $resultUser->num_rows;
@@ -30,7 +31,7 @@
 
 			
 		
-			$sqlUsuario = "INSERT INTO usuario (usuario, password, tipo_usuario_id) VALUES('$usuario','$sha1_pass','$tipo_usuario');";
+			$sqlUsuario = "INSERT INTO usuario (usuario, password, tipo_usuario_id, personal_id) VALUES('$usuario','$sha1_pass','$tipo_usuario');";
 			$resultUsuario = $mysqli->query($sqlUsuario);
 			
 			if($resultUsuario>0)
