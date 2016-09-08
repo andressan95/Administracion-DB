@@ -166,7 +166,7 @@
 			{
 				if( validarUsuario() && validarPassword() && validarTipoUsuario())
 				{
-					document.registro.submit();
+					document.registro
 				}
 			}
 			
@@ -207,8 +207,9 @@
     </nav>
 <body>
     
-        
+         <p>
     <div class="center-align">
+        
         <form class="col s6 center-align container" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
             <ul class="collapsible popout" data-collapsible="accordion">
                 <li>
@@ -310,13 +311,13 @@
             </ul>
 
 
-            <p>
+           
                 <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked hiden/>
                 <label for="idtipo_usuario" hiden>Usuario</label>
             </p>
 
 
-            <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registro" onClick="validar();" >Registrar
+            <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
                 <i class="material-icons right"></i>
             </button>
      </form>
