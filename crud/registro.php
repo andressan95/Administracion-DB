@@ -161,6 +161,12 @@
       </div>
         <div class="row">
         <div class="input-field col s6">
+          <input id="apellido" name="apellido" type="text" class="validate">
+          <label for="apellido">Apellido</label>
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s6">
           <input id="usuario" name="usuario" type="text" class="validate">
           <label for="usuario">Usuario</label>
         </div>
