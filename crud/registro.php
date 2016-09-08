@@ -185,7 +185,7 @@
         
        <form action="#">
     <p>
-        <input name="tipo_usuario" type="radio" id="idadministrador" value="1" />
+        <input name="tipo_usuario" type="radio" id="idadministrador" value="1" checked/>
       <label for="idadministrador">Administrador</label>
     </p>
     <p>

@@ -151,42 +151,101 @@
 <body>
     <div class="row">
     <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="nombre" name="nombre" type="text" class="validate">
-          <label for="nombre">Nombre</label>
-        </div>
-      </div>
-        <div class="row">
-        <div class="input-field col s6">
-          <input id="usuario" name="usuario" type="text" class="validate">
-          <label for="usuario">Usuario</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-         <div class="row">
-        <div class="input-field col s6">
-          <input id="con_password" type="password" name="con_password" class="validate">
-          <label for="con_password">Confirmar Password</label>
-        </div>
-      </div>
-        
-       <form action="#">
-    <p>
-        <input name="tipo_usuario" type="radio" id="idadministrador" value="1" />
-      <label for="idadministrador">Administrador</label>
-    </p>
-    <p>
-        <input name="tipo_usuario" type="radio" id="idusuario" value="2" />
-      <label for="idusuario">Usuario</label>
-    </p>
-    
-  </form>
+            
+                        <div class="centered row">
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="usuario" name="usuario" type="text" class="validate" length="50">
+                                        <label for="usuario">Nombre de Usuario</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="password" type="password" name="password" class="validate" length="50">
+                                        <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="con_password" type="password" name="con_password" class="validate" length="50">
+                                        <label for="con_password">Confirmar Password</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                        <div class="row center">
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="nombre" name="nombre" type="text" class="validate" length="50">
+                                        <label for="nombre">Nombres</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="apellido" type="text" name="apellido" class="validate" length="50">
+                                        <label for="apellido">Apellido</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="cedula" type="number" name="cedula" class="validate" length="10">
+                                        <label for="cedula">Cedula de Identidad</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="correo" type="email" name="correo" class="validate" length="50">
+                                        <label for="correo">Correo</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="telefono" type="number" name="telefono" class="validate" length="10">
+                                        <label for="telefono">Telefono</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                   <div class="center-on-small-only row">
+                            <div class="input-field col s4">
+                                <input id="ciudad" name="ciudad" type="text" class="validate" length="50">
+                                    <label for="ciudad">Ciudad</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <input id="direccion" type="text" name="direccion" class="validate" length="50">
+                                    <label for="direccion">Direccion</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <input id="provincia" type="text" name="provincia" class="validate" length="50">
+                                    <label for="provincia">Provincia</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <input id="sector" name="sector" type="text" class="validate" length="50">
+                                    <label for="sector">Sector</label>
+                            </div>
+                        </div>
+
+                   
+
+           
+                <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked />
+                <label for="idtipo_usuario" >Usuario</label>
+
+
+            <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
+                <i class="material-icons right"></i>
+            </button>
+     </form>
      
         <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
         <i class="material-icons right"></i>

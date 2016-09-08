@@ -10,7 +10,7 @@
         
 	$idUsuario = $_SESSION['id_usuario'];
 	
-	$sql = "SELECT u.id, p.nombre FROM usuarios AS u INNER JOIN personal AS p ON u.id_personal=p.id WHERE u.id = '$idUsuario'";
+	$sql = "SELECT u.id, p.nombre FROM usuarios AS u INNER JOIN personal AS p ON u.personal_id=p.id WHERE u.id = '$idUsuario'";
 	$result=$mysqli->query($sql);
 	
 	$row = $result->fetch_assoc();
