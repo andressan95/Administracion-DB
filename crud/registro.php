@@ -2,16 +2,16 @@
 
 	
 	require('../conexion.php');
-	session_start();
-	
-	if(!isset($_SESSION["id_usuario"])){
-		header("Location: index.php");
-	}
-         session_start();
-        if ($_SESSION['tipo_usuario'] == 0 ) {
-            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
-            header("Location: usuario.php");
-        }
+//	session_start();
+//	
+//	if(!isset($_SESSION["id_usuario"])){
+//		header("Location: index.php");
+//	}
+//         session_start();
+//        if ($_SESSION['tipo_usuario'] == 2) {
+//            echo '<script language="javascript">alert("No tienes acceso, Redireccionando");</script>'; 
+//            header("Location: usuario.php");
+//        }
 	
 	$result=$mysqli->query($sql);
 	
