@@ -15,7 +15,6 @@
 	
 	$result=$mysqli->query($sql);
 	
-	$bandera = false;
 	
 	if(!empty($_POST))
 	{
