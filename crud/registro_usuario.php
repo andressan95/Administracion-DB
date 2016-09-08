@@ -27,15 +27,17 @@
                 $resultPerson = $mysqli->query($sqlUser);
 		$rows2 = $resultPerson -> num_rows;
 		if($rows > 0) {
+                        $valida = 2;
 			$error = "El usuario ya existe";
 			}else {
-
-			$sqlPerson = "INSERT INTO personal (nombre, apellido) VALUES('$nombre','$apellido')";
+                        
+			$sqlPerson = "INSERT INTO personal ((nombre, apellido, cedula, ciudad, direccion, provincia, sector, correo,"
+                                . " telefono)) VALUES('$nombre','$apellido','$cedula','$ciudad','$direccion','$provincia','$sector','$correo')";
 			$resultPerson=$mysqli->query($sqlPerson);
 			$idPersona = $mysqli->insert_id;
 			
 		
-			$sqlUsuario = "INSERT INTO usuario (usuario, password, tipo_usuario_id, personal_id) VALUES('$usuario','$sha1_pass','$tipo_usuario');";
+			$sqlUsuario = "INSERT INTO usuario (usuario, password, tipo_usuario_id, personal_id) VALUES('$usuario','$sha1_pass','$tipo_usuario','$idPersona');";
 			$resultUsuario = $mysqli->query($sqlUsuario);
 			
 			if($resultUsuario>0)
@@ -163,7 +165,8 @@
 <ul class="collapsible popout" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>Registro de Inicio de Sesion</div>
-      <div class="collapsible-body"><div class="row center-align">
+      <div class="collapsible-body">
+          <div class="row center-align">
                 <div class="row">
                 <div class="input-field col s4">
                     <input id="usuario" name="usuario" type="text" class="validate" length="50">
@@ -183,14 +186,78 @@
                     </div>
                 </div>
                 </div>
+      </div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Datos Personales</div>
+      <div class="collapsible-body">
+           <div class="row center-align">
+                <div class="row">
+                <div class="input-field col s4">
+                    <input id="nombre" name="nombre" type="text" class="validate" length="50">
+                        <label for="nombre">Nombres</label>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="apellido" type="text" name="apellido" class="validate" length="50">
+                            <label for="apellido">Apellido</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="cedula" type="number" name="cedula" class="validate" length="10">
+                            <label for="cedula">Cedula de Identidad</label>
+                    </div>
+                </div>
+             
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="correo" type="email" name="correo" class="validate" length="50">
+                            <label for="correo">Correo</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="telefono" type="number" name="telefono" class="validate" length="10">
+                            <label for="telefono">Telefono</label>
+                    </div>
+                </div>
+                </div>
+      
+      
+      </div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+      <div class="collapsible-header"><i class="material-icons">place</i>Direccion</div>
+      <div class="collapsible-body">
+          
+            <div class="row">
+                <div class="input-field col s4">
+                    <input id="ciudad" name="ciudad" type="text" class="validate" length="50">
+                        <label for="ciudad">Ciudad</label>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="direccion" type="text" name="direccion" class="validate" length="50">
+                            <label for="direccion">Direccion</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="provincia" type="text" name="provincia" class="validate" length="50">
+                            <label for="provincia">Provincia</label>
+                    </div>
+                </div>
+               <div class="row">
+                <div class="input-field col s4">
+                    <input id="sector" name="sector" type="text" class="validate" length="50">
+                        <label for="sector">Sector</label>
+                </div>
+                </div>
+          
+      </div>
     </li>
   </ul>
           
