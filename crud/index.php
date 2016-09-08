@@ -22,7 +22,7 @@
 		if($rows > 0) {
 			$row = $result->fetch_assoc();
 			$_SESSION['id_usuario'] = $row['id'];
-			$_SESSION['tipo_usuario'] = $row['id'];
+			$_SESSION['tipo_usuario'] = $row['tipo_usuario_id'];
 			
 			header("location: administrador.php");
 			} else {
@@ -93,7 +93,51 @@
 
                 <a href="registro_usuario.php" class="btn waves-effect waves-light">Registrarse <i class="mdi-content-send right"></i></a>
             </form>
-          
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+            
+              <div class="preloader-wrapper small active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
         
              <div style = "font-size:16px; color:#cc0000;"><?php echo isset($error) ? utf8_decode($error) : '' ; ?>  
              
