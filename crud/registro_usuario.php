@@ -7,6 +7,7 @@
 	$result=$mysqli->query($sql);
 	
 	$valida = 0;
+        
 	if(!empty($_POST))
 	{
 		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
@@ -209,7 +210,7 @@
     
     <div class="center-align">
         
-        <form class="col s6 center-align container" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form class="col s12" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
             <ul class="collapsible popout" data-collapsible="accordion">
                 <li>
                     <div class="collapsible-header"><i class="material-icons">filter_drama</i>Registro de Inicio de Sesion</div>
