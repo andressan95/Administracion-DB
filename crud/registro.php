@@ -20,6 +20,8 @@
 	if(!empty($_POST))
 	{
 		$nombre = mysqli_real_escape_string($mysqli,$_POST['nombre']);
+                $apellido = mysqli_real_escape_string($mysqli,$_POST['apellido']);
+
 		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
 		$password = mysqli_real_escape_string($mysqli,$_POST['password']);
 		$tipo_usuario = $_POST['tipo_usuario'];
@@ -35,11 +37,11 @@
 			$error = "El usuario ya existe";
 			} else {
 			
-			$sqlPerson = "INSERT INTO personal (nombre) VALUES('$nombre')";
+			$sqlPerson = "INSERT INTO personal (nombre,apellido) VALUES('$nombre','$apellido')";
 			$resultPerson=$mysqli->query($sqlPerson);
 			$idPersona = $mysqli->insert_id;
 			
-			$sqlUsuario = "INSERT INTO usuarios (usuario, password, id_personal, id_tipo) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario')";
+			$sqlUsuario = "INSERT INTO usuarios (usuario, password, personal_id, tipo_usuario_id) VALUES('$usuario','$sha1_pass','$idPersona','$tipo_usuario')";
 			$resultUsuario = $mysqli->query($sqlUsuario);
 			
 			if($resultUsuario>0)
