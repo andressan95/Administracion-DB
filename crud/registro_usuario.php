@@ -316,7 +316,7 @@
             </p>
 
 
-            <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
+            <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registro" onClick="validar();" >Registrar
                 <i class="material-icons right"></i>
             </button>
      </form>
