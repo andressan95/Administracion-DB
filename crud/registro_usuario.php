@@ -151,44 +151,39 @@
         </div>
     </nav>
 <body>
-    <div class="row center-align">
-    <form class="col s6" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-        
-        <label>Registro para Inicio de Sesion</label>
-      </div>
-        <div class="row">
-        <div class="input-field col s6">
-          <input id="usuario" name="usuario" type="text" class="validate" length="50">
-          <label for="usuario">Nombre de Usuario</label>
-        </div>
-            
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate" length="50">
-          <label for="password">Password</label>
-        </div>
-      </div>
-         <div class="row">
-        <div class="input-field col s6">
-          <input id="con_password" type="password" name="con_password" class="validate" length="50">
-          <label for="con_password">Confirmar Password</label>
-        </div>
-      </div>
-        
-        <form action="#">
-    <p>
-        <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked/>
-      <label for="idtipo_usuario">Usuario</label>
-    </p>
-    
-  </form>
-     
-        <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
-        <i class="material-icons right"></i>
-        </button>
-        
-    </form>
+        <form class="col s6 center-align" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+
+            <label>Registro para Inicio de Sesion</label>
+            <div class="row center-align">
+                <div class="input-field col s6">
+                    <input id="usuario" name="usuario" type="text" class="validate" length="50">
+                        <label for="usuario">Nombre de Usuario</label>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="password" type="password" name="password" class="validate" length="50">
+                            <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="con_password" type="password" name="con_password" class="validate" length="50">
+                            <label for="con_password">Confirmar Password</label>
+                    </div>
+                </div>
+
+                <p>
+                    <input name="tipo_usuario" id="idtipo_usuario" type="radio" value="2" checked/>
+                    <label for="idtipo_usuario">Usuario</label>
+                </p>
+
+
+                <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
+                    <i class="material-icons right"></i>
+                </button>
+            </div>
+        </form>
         
               
 		<?php if($valida==1) {   
