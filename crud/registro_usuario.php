@@ -191,7 +191,7 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">whatshot</i>Datos Personales</div>
       <div class="collapsible-body">
-           <div class="row center-align">
+           <div class="row center-block">
                 <div class="row">
                 <div class="input-field col s4">
                     <input id="nombre" name="nombre" type="text" class="validate" length="50">
