@@ -151,6 +151,7 @@
         </div>
     </nav>
 <body>
+    <div class="center-align">
         <form class="col s6 center-align container" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 
             <label>Registro para Inicio de Sesion</label>
@@ -185,7 +186,7 @@
                 </button>
             </div>
         </form>
-        
+     </div>   
               
 		<?php if($valida==1) {   
                     
