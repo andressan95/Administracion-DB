@@ -6,12 +6,13 @@
 	
 	$result=$mysqli->query($sql);
 	
-	
+	$valida = 0;
 	if(!empty($_POST))
 	{
 		$usuario = mysqli_real_escape_string($mysqli,$_POST['usuario']);
 		$password = mysqli_real_escape_string($mysqli,$_POST['password']);
-            
+                $nombre = mysqli_real_escape_string($mysqli,$_POST['nombre']);
+		$apellido = mysqli_real_escape_string($mysqli,$_POST['apellido']);
 
 		$tipo_usuario = $_POST['tipo_usuario'];
 		$sha1_pass = sha1($password);
@@ -29,14 +30,18 @@
 			$error = "El usuario ya existe";
 			}else {
 
+			$sqlPerson = "INSERT INTO personal (nombre, apellido) VALUES('$nombre','$apellido')";
+			$resultPerson=$mysqli->query($sqlPerson);
+			$idPersona = $mysqli->insert_id;
 			
 		
 			$sqlUsuario = "INSERT INTO usuario (usuario, password, tipo_usuario_id, personal_id) VALUES('$usuario','$sha1_pass','$tipo_usuario');";
 			$resultUsuario = $mysqli->query($sqlUsuario);
 			
 			if($resultUsuario>0)
-			$bandera = true;
-			else
+                            $valida = 1;
+                            else 
+                                 $valida = 2;
 			$error = "Error al Registrar usuario";
 			
                         }
@@ -146,6 +151,7 @@
         </div>
     </nav>
 <body>
+    <center>
     <div class="row">
     <form class="col s6" id="registro" name="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
         
@@ -178,7 +184,6 @@
     </p>
     
   </form>
-       
      
         <button class="btn waves-effect waves-light" type="button" value="Registrar" id="submit" name="registrar" onClick="validar();" >Registrar
         <i class="material-icons right"></i>
@@ -186,10 +191,9 @@
         
     </form>
         
-        
-  </div>
-          
-		<?php if($bandera) {   
+     </center>      
+              
+		<?php if($valida==1) {   
                     
                     ?>
  
@@ -210,7 +214,7 @@
 			
         		
 
-			<?php }else{ ?>
+			<?php }else if($valida == 2){ ?>
 			<br />
                         
                         <script type="text/javascript">  
