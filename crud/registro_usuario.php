@@ -147,27 +147,27 @@
 				}
 			}
 			
-			function validarTipoUsuario()
-			{
-//                            var radioButElegido = false;
-//                            for (var i=0; i<radioButElegido.length; i++) {
-//                                  if (radioButElegido[i].checked == true) { radioButElegido=true;} }
-//                                    if (radioButElegido == false)
-//                                    {msgValidacion = msgValidacion+alert('Seleccione tipo de usuario');}
-
+//			function validarTipoUsuario()
+//			{
+////                            var radioButElegido = false;
+////                            for (var i=0; i<radioButElegido.length; i++) {
+////                                  if (radioButElegido[i].checked == true) { radioButElegido=true;} }
+////                                    if (radioButElegido == false)
+////                                    {msgValidacion = msgValidacion+alert('Seleccione tipo de usuario');}
 //
-				indice = document.getElementById("idtipo_usuario").checked;
-				if( indice == null) {
-					alert('Seleccione tipo de usuario');
-					return false;
-				} else { return true;}
-			}
+////
+//				indice = document.getElementById("id_usuario").checked;
+//				if( indice == null) {
+//					alert('Seleccione tipo de usuario');
+//					return false;
+//				} else { return true;}
+//			}
 			
 			function validar()
 			{
-				if( validarUsuario() && validarPassword() && validarTipoUsuario())
+				if( validarUsuario() && validarPassword() && validarNombre()&& validarApellido())
 				{
-document.registro.submit();				}
+                                    document.registro.submit();				}
 			}
 			
 		</script>
