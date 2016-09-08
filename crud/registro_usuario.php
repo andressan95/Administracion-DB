@@ -166,7 +166,7 @@
 			{
 				if( validarUsuario() && validarPassword() && validarTipoUsuario())
 				{
-					document.registro
+					document.registro.submit();
 				}
 			}
 			
