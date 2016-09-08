@@ -1,0 +1,863 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"form	Tag"
+			],
+			[
+				"CON",
+				"Conn"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "vista/usuarios.php",
+			"settings":
+			{
+				"buffer_size": 1269,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 105,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modelo/db_modelo.php",
+			"settings":
+			{
+				"buffer_size": 409,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\n/*\n		\n		Database=db_administracion;\n		Data Source=ca-cdbr-azure-central-a.cloudapp.net;\n		User Id=be00176cf03501;\n		Password=b129547f\n		*/\n	\n	$mysqli=new mysqli(\"ca-cdbr-azure-central-a.cloudapp.net\",\"be00176cf03501\",\"b129547f\",\"db_administracion\"); //servidor, usuario de base de datos, contraseña del usuario, nombre de base de datos\n	\n	if(mysqli_connect_errno()){\n		echo 'Conexion Fallida : ', mysqli_connect_error();\n		exit();\n	}\n	\n?>",
+			"file": "/C/Users/Andrés/Desktop/Proyecto_AdministracionDB/conexion.php",
+			"file_size": 463,
+			"file_write_time": 131172680884025393,
+			"settings":
+			{
+				"buffer_size": 445,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Andrés/Desktop/Facci/Programacion Web/Hotel_Paraiso_Web/web/index.html",
+			"settings":
+			{
+				"buffer_size": 11390,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<title>www.css3maker.com</title>\n<style type=\"text/css\">\nbody{ font-size:18px; color:#FFF; }\na { color:#FFF}\n.classname { border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}\n\n/* =Your Generated css \n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/\n.classname{-moz-box-shadow: 7px  8px  18px  #000000;-webkit-box-shadow: 7px  8px  18px  #000000;box-shadow: 7px  8px  18px  #000000;}\n/* End of Your Generated css \n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/\n</style>\n</head>\n\n<body>\n<div class=\"classname\"><a href=\"http://www.css3maker.com\">www.css3maker.com</a></div>\n</body>\n</html>\n",
+			"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$EXa0.902/css3maker.html",
+			"file_size": 1018,
+			"file_write_time": 131173137540000000,
+			"settings":
+			{
+				"buffer_size": 1018,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<title>www.css3maker.com</title>\n<style type=\"text/css\">\nbody{ font-size:18px; color:#FFF; }\na { color:#FFF}\n.classname { border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 50px 100px 50px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}\n\n/* =Your Generated css \n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/\n.classname{-moz-box-shadow: 8px  10px  27px  #000000;-webkit-box-shadow: 8px  10px  27px  #000000;box-shadow: 8px  10px  27px  #000000;}\n/* End of Your Generated css \n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/\n</style>\n</head>\n\n<body>\n<div class=\"classname\"><a href=\"http://www.css3maker.com\">www.css3maker.com</a></div>\n</body>\n</html>\n",
+			"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$EXa0.349/css3maker.html",
+			"file_size": 1021,
+			"file_write_time": 131173168380000000,
+			"settings":
+			{
+				"buffer_size": 1021,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controlador/usuarios_controlador.php",
+			"settings":
+			{
+				"buffer_size": 93,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\n//--------------------------------------------------------------\n//  _____  __  __  ____                __                   \n// /\\___ \\/\\ \\/\\ \\/\\  _`\\             /\\ \\                  \n// \\/__/\\ \\ \\ \\_\\ \\ \\ \\/\\_\\    ___    \\_\\ \\     __    ____  \n//    _\\ \\ \\ \\  _  \\ \\ \\/_/_  / __`\\  /'_` \\  /'__`\\ /',__\\ \n//   /\\ \\_\\ \\ \\ \\ \\ \\ \\ \\L\\ \\/\\ \\L\\ \\/\\ \\L\\ \\/\\  __//\\__, `\\\n//   \\ \\____/\\ \\_\\ \\_\\ \\____/\\ \\____/\\ \\___,_\\ \\____\\/\\____/\n//    \\/___/  \\/_/\\/_/\\/___/  \\/___/  \\/__,_ /\\/____/\\/___/ \n// \n//      http://www.jhcodes.com/ - SAU v2.0 Beta 1\n//                jessus.herrera@hotmail.com\n//\n//--------------------------------------------------------------\n\n// incluimos las funciones\nrequire_once 'admin/includes/config.class.php';\nrequire_once 'includes/sau-functions.php';\n\nif (isset($_POST['nombre'])) {\n\n// conexon a base de datos\n$conexion = Conexion::singleton_conexion();\n\n\n$view = \"SELECT * FROM users WHERE email = :email\";\n$sentencia = $conexion -> prepare($view);\n$sentencia -> bindParam(':email', $_POST['mail']);\n$sentencia -> execute();\n$resultados = $sentencia -> fetchAll();\nif (empty($resultados)) {\n//--------------------------------------------------------------\n\n// contraseña\n$nuevapassword = sha1(SALT.$_POST['password'].PEPER);\n// perfil\n$newprofile = md5($_POST['nombre']);\n// Rango\n$rank = 1;\n\n$SQL = \"INSERT INTO users(name,email,password,profile,public,rank) VALUES(:name,:email,:password,:profile,:public,:rank)\";\n$sentence = $conexion -> prepare($SQL);\n$sentence -> bindParam(':name',$_POST['nombre']);\n$sentence -> bindParam(':email',$_POST['mail']);\n$sentence -> bindParam(':password',$nuevapassword);\n$sentence -> bindParam(':profile',$newprofile);\n$sentence -> bindParam(':public',$rank);\n$sentence -> bindParam(':rank',$rank);\n$sentence -> execute();\n\nheader('Location: index.php');\n\n//--------------------------------------------------------------\n}else{\n\nheader('Location: registro.php?error');\n\n}\n\n}\n\n?>\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\n    <title><?php echo SITETITLE; ?></title>\n\n    <!-- Bootstrap -->\n    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>\n    <link href=\"themes/style.css\" rel=\"stylesheet\">\n    <?php getstyle(); ?>\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n      <script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\n      <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n  </head>\n\n\n<div id=\"login\" class=\"text-center\">\n    \n    <img src=\"themes/sau-logo-white.png\">\n	\n	<div class=\"well\">\n      \n           <form id=\"form-register\" method=\"POST\" action=\"\">\n             <label>Nombre:</label>\n             <input class=\"form-control\" type=\"text\" name=\"nombre\">\n             <label>Email:</label>\n             <input class=\"form-control\" type=\"text\" name=\"mail\">\n             <label>Contraseña:</label>\n             <input class=\"form-control\" type=\"password\" name=\"password\"><p></p>\n             <button type=\"submit\" class=\"btn btn-default pull-right\"><i class=\"fa fa-power-off\"></i> Registrarme</button>        \n           </form>\n      </div>\n	\n	  <?php\n      if (isset($_GET['error'])) {\n      	echo'<div class=\"alert alert-danger alert-dismissible fade in\" role=\"alert\"> <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span></button> <strong> Error! </strong> Este correo electronico ya esta en uso :( debes de utilizar otro correo. </div>';\n      }\n    ?>\n\n</div>\n\n\n\n    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n    <script src=\"themes/js/jquery.min.js\"></script>\n    <!-- Include all compiled plugins (below), or include individual files as needed -->\n    <script src=\"themes/js/bootstrap.min.js\"></script>\n    <!-- efectos SAU 2 -->\n    <script src=\"themes/js/effects.js\"></script>\n    <!-- validation -->\n    <script src=\"themes/js/jquery.validate.min.js\"></script>\n    <script src=\"themes/js/additional-methods.min.js\"></script>\n    <script type=\"text/javascript\">\n        $(\"#form-register\").validate({\n          rules: {\n            nombre: \"required\",\n            password: \"required\",\n            mail: {\n              required: true,\n              email: true\n            }\n          }\n        });\n    </script>\n\n  </body>\n</html>",
+			"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$DIa0.749/registro.php",
+			"file_size": 4882,
+			"file_write_time": 130965989349817968,
+			"settings":
+			{
+				"buffer_size": 4744,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\n/*\n|--------------------------------------------------------------------------\n| Model Factories\n|--------------------------------------------------------------------------\n|\n| Here you may define all of your model factories. Model factories give\n| you a convenient way to create models for testing and seeding your\n| database. Just tell the factory how a default model should look.\n|\n*/\n\n$factory->define(sisVentas\\User::class, function (Faker\\Generator $faker) {\n    return [\n        'name' => $faker->name,\n        'email' => $faker->safeEmail,\n        'password' => bcrypt(str_random(10)),\n        'remember_token' => str_random(10),\n    ];\n});\n",
+			"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/database/factories/ModelFactory.php",
+			"file_size": 656,
+			"file_write_time": 131137651040000000,
+			"settings":
+			{
+				"buffer_size": 656,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Database\\Migrations\\Migration;\n\nclass CreateUsersTable extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('users', function (Blueprint $table) {\n            $table->increments('id');\n            $table->string('name');\n            $table->string('email')->unique();\n            $table->string('password');\n            $table->rememberToken();\n            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::drop('users');\n    }\n}\n",
+			"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/database/migrations/2014_10_12_000000_create_users_table.php",
+			"file_size": 699,
+			"file_write_time": 131137651040000000,
+			"settings":
+			{
+				"buffer_size": 699,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nuse Illuminate\\Database\\Seeder;\n\nclass DatabaseSeeder extends Seeder\n{\n    /**\n     * Run the database seeds.\n     *\n     * @return void\n     */\n    public function run()\n    {\n        // $this->call(UsersTableSeeder::class);\n    }\n}\n",
+			"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/database/seeds/DatabaseSeeder.php",
+			"file_size": 241,
+			"file_write_time": 131137651040000000,
+			"settings":
+			{
+				"buffer_size": 241,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <title>Laravel</title>\n\n        <link href=\"https://fonts.googleapis.com/css?family=Lato:100\" rel=\"stylesheet\" type=\"text/css\">\n\n        <style>\n            html, body {\n                height: 100%;\n            }\n\n            body {\n                margin: 0;\n                padding: 0;\n                width: 100%;\n                display: table;\n                font-weight: 100;\n                font-family: 'Lato';\n            }\n\n            .container {\n                text-align: center;\n                display: table-cell;\n                vertical-align: middle;\n            }\n\n            .content {\n                text-align: center;\n                display: inline-block;\n            }\n\n            .title {\n                font-size: 96px;\n            }\n        </style>\n    </head>\n    <body>\n        <div class=\"container\">\n            <div class=\"content\">\n                <div class=\"title\">Laravel 5</div>\n            </div>\n        </div>\n    </body>\n</html>\n",
+			"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/resources/views/welcome.blade.php",
+			"file_size": 1023,
+			"file_write_time": 131137651040000000,
+			"settings":
+			{
+				"buffer_size": 1023,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controlador/traer_tabla.php",
+			"settings":
+			{
+				"buffer_size": 875,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controlador/listado_tablas.php",
+			"settings":
+			{
+				"buffer_size": 618,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Andrés/Desktop/crud-operations-with-php-mysql/edit_data.php",
+			"settings":
+			{
+				"buffer_size": 2458,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$EXa0.572/parallax-template/index.html",
+			"settings":
+			{
+				"buffer_size": 6823,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 538.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Andrés/Desktop/dd",
+		"/C/Users/Andrés/Desktop/dd/controlador",
+		"/C/Users/Andrés/Desktop/dd/modelo",
+		"/C/Users/Andrés/Desktop/dd/publico",
+		"/C/Users/Andrés/Desktop/dd/publico/js",
+		"/C/Users/Andrés/Desktop/dd/sesiones/vistas",
+		"/C/Users/Andrés/Desktop/dd/vista"
+	],
+	"file_history":
+	[
+		"/C/Users/Andrés/AppData/Local/Temp/Rar$DIa0.260/Job.php",
+		"/C/Users/Andrés/Desktop/dd/publico/js/usuarios.php",
+		"/C/Users/Andrés/Desktop/dd/controlador/traer_tabla.php",
+		"/C/Users/Andrés/Desktop/dd/controlador/buscarUsuario_controlador.php",
+		"/C/Users/Andrés/Desktop/dd/controlador/listado_tablas.php",
+		"/C/Users/Andrés/Desktop/dd/controlador/guardarUsuario_controlador.php",
+		"/C/Users/Andrés/Desktop/dd/publico/js/myjava.js",
+		"/C/Users/Andrés/Desktop/dd/modelo/usuarios_modelo.php",
+		"/C/Users/Andrés/Desktop/dd/modelo/db_modelo.php",
+		"/C/Users/Andrés/Desktop/dd/sesiones/vistas/ventas.php",
+		"/C/Users/Andrés/Desktop/dd/sesiones/vistas/login.php",
+		"/C/Users/Andrés/Desktop/dd/sesiones/vistas/almacen.php",
+		"/C/Users/Andrés/Desktop/dd/index.php",
+		"/C/Users/Andrés/Desktop/dd/publico/js/jquery.js",
+		"/C/Users/Andrés/Desktop/dd/tutoriales.sql",
+		"/C/Users/Andrés/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Andrés/Desktop/dd/controlador/usuarios_controlador.php",
+		"/C/Users/Andrés/Desktop/nodecrud-master/app.js",
+		"/C/Users/Andrés/Desktop/hostingstart.html",
+		"/C/Users/Andrés/public/index.html",
+		"/C/Users/Andrés/AppData/Local/Temp/fz3temp-1/hostingstart.html",
+		"/C/Users/Andrés/Desktop/Facci/Programacion Web/ProyectoDeWeb/web/index.html",
+		"/C/Users/Andres/2016/buscarlocal/google-services.json",
+		"/C/friendlychat-master/android-start/google-services.json",
+		"/C/Users/Andrés/Desktop/Facci/Programacion Web/Hotel_Paraiso_Web/web/index.html",
+		"/C/Users/Andrés/Desktop/Facci/Programacion Web/examen/index.html",
+		"/C/Users/Andrés/public/scripts/main.js",
+		"/C/Users/Andrés/public/firebase.json",
+		"/C/Users/Andrés/public/manifest.json"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"city_name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 15,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "vista/usuarios.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1116,
+								1116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 277.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "modelo/db_modelo.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 409,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								160
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Andrés/Desktop/Proyecto_AdministracionDB/conexion.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								145
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Andrés/Desktop/Facci/Programacion Web/Hotel_Paraiso_Web/web/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 169.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$EXa0.902/css3maker.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								899
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$EXa0.349/css3maker.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								893
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 21.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "controlador/usuarios_controlador.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 93,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$DIa0.749/registro.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/database/factories/ModelFactory.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/database/migrations/2014_10_12_000000_create_users_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/database/seeds/DatabaseSeeder.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/Users/Andrés/Desktop/Administracion-DB/Proyecto_AdministracionDB/folder/resources/views/welcome.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "controlador/traer_tabla.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 875,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "controlador/listado_tablas.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								394,
+								394
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/C/Users/Andrés/Desktop/crud-operations-with-php-mysql/edit_data.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2458,
+								2458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/C/Users/Andrés/AppData/Local/Temp/Rar$EXa0.572/parallax-template/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Administraciondb.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 63.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
