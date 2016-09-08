@@ -167,8 +167,7 @@
 			{
 				if( validarUsuario() && validarPassword() && validarTipoUsuario())
 				{
-					$valida=3;
-				}
+document.registro.submit();				}
 			}
 			
 		</script>
